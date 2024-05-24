@@ -1,8 +1,8 @@
 import '../../styles/navbar.css';
-import {DarkModeOutlined, LightModeOutlined, Menu, MenuOpen} from "@mui/icons-material";
+import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 
-function Navbar({handleThemeChange, isDark}) {
+function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -28,12 +28,12 @@ function Navbar({handleThemeChange, isDark}) {
             <h1 className="navbar-title">Moetez Ayari</h1>
             <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
                 {navMenuOpen ? (
-                    <MenuOpen fontSize={ 'large'} />
+                    <MenuOpen fontSize={'large'} />
                 ) : (
                     <Menu fontSize={'large'} />
                 )}
             </div>
-            <div className={`navbar-menu-container ${ isMobile ? `${navMenuOpen ? 'open' : 'closed'}` : ''}`}>
+            <div className={`navbar-menu-container ${isMobile ? `${navMenuOpen ? 'open' : 'closed'}` : ''}`}>
                 <ul className="navbar-menu">
                     <li>About</li>
                     <li>Experience</li>
@@ -48,7 +48,7 @@ function Navbar({handleThemeChange, isDark}) {
                         {isDark ?
                             (<DarkModeOutlined fontSize={'large'} />)
                             :
-                            (<LightModeOutlined fontSize={'large'}/>)
+                            (<LightModeOutlined fontSize={'large'} />)
                         }
                     </div>
                     <button className="navbar-download-button">

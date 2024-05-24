@@ -73,6 +73,17 @@
 
 .navbar-light-dark-mode {
     cursor: pointer;
+    border-radius: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-light-dark-mode:hover {
+    color: var(--button-text);
+    background-color: var(--nav-text-color);
 }
 
 .navbar-download-button {
