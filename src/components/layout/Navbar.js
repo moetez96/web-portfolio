@@ -26,38 +26,36 @@ function Navbar({handleThemeChange, isDark}) {
     return (
         <div className="navbar-wrapper">
             <h1 className="navbar-title">Moetez Ayari</h1>
-            <div className="navbar-menu-icon" onClick={handleMenuOpen}>
+            <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
                 {navMenuOpen ? (
                     <MenuOpen fontSize={ 'large'} />
                 ) : (
                     <Menu fontSize={'large'} />
                 )}
             </div>
-            {(isMobile && navMenuOpen) || !isMobile ? (
-                <div className="navbar-menu-container">
-                    <ul className="navbar-menu">
-                        <li>About</li>
-                        <li>Experience</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
-                    </ul>
+            <div className={`navbar-menu-container ${ isMobile ? `${navMenuOpen ? 'open' : 'closed'}` : ''}`}>
+                <ul className="navbar-menu">
+                    <li>About</li>
+                    <li>Experience</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
 
-                    <div className="navbar-divider"></div>
+                <div className="navbar-divider"></div>
 
-                    <div className="navbar-options">
-                        <div className="navbar-light-dark-mode" onClick={handleThemeClick}>
-                            {isDark ?
-                                (<DarkModeOutlined fontSize={'large'} />)
-                                :
-                                (<LightModeOutlined fontSize={'large'}/>)
-                            }
-                        </div>
-                        <button className="navbar-download-button">
-                            Download CV
-                        </button>
+                <div className="navbar-options">
+                    <div className="navbar-light-dark-mode" onClick={handleThemeClick}>
+                        {isDark ?
+                            (<DarkModeOutlined fontSize={'large'} />)
+                            :
+                            (<LightModeOutlined fontSize={'large'}/>)
+                        }
                     </div>
+                    <button className="navbar-download-button">
+                        Download CV
+                    </button>
                 </div>
-            ) : null}
+            </div>
         </div>
     );
 }
