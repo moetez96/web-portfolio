@@ -7,12 +7,13 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--nav-color);
     backdrop-filter: blur(10px);
     max-width: 100%;
     height: 96px;
-    color: #C7C7C7;
+    color: var(--nav-text-color);
 }
+
 
 .navbar-menu-container {
     display: flex;
@@ -44,7 +45,7 @@
     height: 2px;
     bottom: -2px;
     left: 50%;
-    background-color: #C7C7C7;
+    background-color: var(--nav-text-color);
     transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -69,8 +70,8 @@
     cursor: pointer;
     font-family: "Bebas Neue", monospace;
     font-size: large;
-    color: rgba(10, 10, 10, 0.96);
-    background-color: #C7C7C7;
+    color: var(--button-text);
+    background-color: var(--nav-text-color);
     width: 136px;
     height: 36px;
     border-radius: 12px;
@@ -79,8 +80,8 @@
 }
 
 .navbar-download-button:hover {
-    color: #C7C7C7;
-    background-color: rgba(51, 51, 51, 0.96);
+    color: var(--nav-text-color);
+    background-color: var(--button-hover-color);
 }
 
 .navbar-divider {
@@ -125,15 +126,16 @@
     .navbar-menu-container {
         position: absolute;
         right: 0;
+        left: 0;
         top: 66px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         height: max-content;
-        width: max-content;
-        padding: 10px 16px;
-        background-color: rgba(0, 0, 0, 0.5);
+        max-width: 100%;
+        padding: 10px 30px;
+        background-color: var(--nav-color);
         backdrop-filter: blur(10px);
     }
 
@@ -148,7 +150,29 @@
     .navbar-divider {
         height: 1px;
         width: 100%;
-        background-color: #202528;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .navbar-wrapper {
+        padding: 0 15px;
+        height: 56px;
+    }
+
+    .navbar-menu-icon {
+        display: block;
+    }
+
+    .navbar-menu-container {
+        top: 56px;
+        padding: 8px 15px;
+    }
+
+    .navbar-divider {
+        height: 1px;
+        width: 100%;
         margin: 10px 0;
     }
 }

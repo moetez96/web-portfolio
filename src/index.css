@@ -1,12 +1,26 @@
 body {
   margin: 0;
-  font-family: "Bebas Neue", monospace;
+  font-family: "Bebas Neue", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   background-color: rgba(10, 10, 10, 0.96);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-background-color: #0A0A0A;
+  --secondary-background-color: #1a1a1a;
+  --nav-color: rgba(0, 0, 0, 0.5);
+  --button-text: rgba(10, 10, 10, 0.96);
+  --button-hover-color: rgba(51, 51, 51, 0.96);
+  --nav-text-color:#C7C7C7;
+}
+
+[data-theme="light"] {
+  --primary-background-color: #faf8f8;
+  --secondary-background-color: #F9FAFB;
+  --nav-color: rgba(255, 255, 255, 0.5);
+  --button-text: rgba(240, 240, 240, 0.96);
+  --button-hover-color: rgba(199, 199, 199, 0.96);
+  --nav-text-color:#383838;
 }

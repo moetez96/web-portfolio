@@ -3,5 +3,5 @@
   min-height: 100dvh;
   max-width: 1920px;
   margin: 0 auto;
-  background-color: #0A0A0A;
+  background-color: var(--primary-background-color);
 }
