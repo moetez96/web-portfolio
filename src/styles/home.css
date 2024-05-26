@@ -1,0 +1,123 @@
+.home-wrapper {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    max-height: 100dvh;
+    padding-top: 96px;
+    bottom: 10px;
+    color: var(--text-color);
+    background-color: var(--primary-background-color);
+}
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+.profile-desc {
+    width: 50%;
+     >h1 {
+         font-size: 7.5vw;
+         line-height: 90%;
+         padding: 0;
+         margin: 0;
+     }
+    >p {
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+.profile-contact-btns {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    > button {
+        background-color: #D3E97A;
+        height: 54px;
+        min-width: 163px;
+        padding: 0 25px;
+        border: 0;
+        border-radius: 100px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        text-align: left;
+    }
+
+    > button .circle {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-color: #000;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > span {
+            display: none;
+            transition: all 0.3s ease;
+            color: white;
+        }
+    }
+
+    > button:hover .circle {
+        width: 38px;
+        height: 38px;
+        right: 10px;
+
+        > span {
+            display: block;
+        }
+    }
+
+    > button:hover {
+        background-color: rgba(149, 169, 54, 0.8);
+    }
+}
+
+.contact-icons {
+    min-width: 54px;
+    min-height: 54px;
+    background-color: transparent;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-icons:hover {
+    background-color: rgba(175, 175, 175, 0.4);
+}
+
+.profile-pic-container {
+    background-color: #F9FAFB;
+    width: 38%;
+    height: 600px;
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .home-wrapper {
+        padding-top: 66px;
+    }
+
+    .home-container {
+        margin-top: 30px;
+    }
+
+}

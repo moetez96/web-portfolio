@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from "./components/layout/Navbar";
 import { useState, useEffect } from "react";
+import Home from "./components/layout/Home";
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
@@ -19,6 +20,7 @@ function App() {
     return (
         <div className="App" data-theme={isDark ? "dark" : "light"}>
             <Navbar handleThemeChange={handleThemeChange} isDark={isDark}/>
+            <Home />
         </div>
     );
 }
