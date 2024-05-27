@@ -207,15 +207,15 @@
     .profile-contact-btns {
         gap: 10px;
         > button {
-            height: 26px;
-            min-width: 130px;
+            height: 30px;
+            min-width: 120px;
             padding: 0 10px;
             font-size: 14px;
         }
 
         > button .circle {
             position: absolute;
-            right: 15px;
+            right: 10px;
             width: 8px;
             height: 8px;
         }
@@ -227,6 +227,7 @@
         > button:hover .circle {
             width: 26px;
             height: 26px;
+            right: 5px;
         }
     }
 

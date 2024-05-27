@@ -5,3 +5,12 @@
   margin: 0 auto;
   background-color: var(--primary-background-color);
 }
+
+hr {
+  background-color: #484848;
+  color: #484848;
+  border: 0;
+  height: 1px;
+  max-width: 98%;
+  margin: 60px auto;
+}
