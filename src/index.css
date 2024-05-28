@@ -19,6 +19,7 @@ body {
   --nav-text-color:#C7C7C7;
   --text-color: #FFFFFF;
   --nav-divider-color: #202528;
+  --paragraph-color: #C7C7C7;
 }
 
 [data-theme="light"] {
@@ -29,5 +30,6 @@ body {
   --button-hover-color: rgba(199, 199, 199, 0.96);
   --nav-text-color:#383838;
   --text-color: #000000FF;
+  --paragraph-color: #383838;
   --nav-divider-color: #DFDAD7;
 }

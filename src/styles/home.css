@@ -106,7 +106,7 @@
 }
 
 .profile-pic-container {
-    background-color: #F9FAFB;
+    background-color: var(--text-color);
     width: 500px;
     height: 600px;
     border-radius: 16px;

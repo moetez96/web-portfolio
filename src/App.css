@@ -14,3 +14,7 @@ hr {
   max-width: 98%;
   margin: 60px auto;
 }
+
+p {
+  color: var(--paragraph-color);
+}

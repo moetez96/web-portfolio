@@ -1,8 +1,8 @@
 .projects-wrapper {
     position: relative;
     width: 100%;
-    height: max-content;
     min-height: 100dvh;
+    height: max-content;
     bottom: 10px;
     color: var(--text-color);
     background-color: var(--primary-background-color);
@@ -11,6 +11,7 @@
 .projects-container {
     gap: 10px;
     padding: 0 7%;
+    height: max-content;
 }
 
 .projects-header {
@@ -28,12 +29,19 @@
     }
 }
 
+.projects-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 60px 0;
+}
+
 @media (max-width: 1024px) {
 
     .projects-header {
         width: 450px;
         >h1 {
-            font-size: 6.5vw;
+            font-size: 6vw;
         }
         >p {
             font-size: 16px;
