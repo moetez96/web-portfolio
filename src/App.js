@@ -24,6 +24,7 @@ function App() {
             <Home />
             <hr />
             <Projects />
+            <hr />
         </div>
     );
 }
