@@ -23,8 +23,8 @@ body {
 }
 
 [data-theme="light"] {
-  --primary-background-color: #faf8f8;
-  --secondary-background-color: #F9FAFB;
+  --primary-background-color: #F5F5F5;
+  --secondary-background-color: #E5E5E5;
   --nav-color: rgba(255, 255, 255, 0.9);
   --button-text: rgba(240, 240, 240, 0.96);
   --button-hover-color: rgba(199, 199, 199, 0.96);
