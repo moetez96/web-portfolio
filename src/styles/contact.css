@@ -63,10 +63,56 @@
 }
 
 @media (max-width: 768px) {
+    .contact-info {
+        > h1 {
+            font-size: 43px;
+        }
+
+    }
+
+    .contact-apps {
+        gap: 10px;
+        >svg {
+            font-size: 28px;
+        }
+    }
+
+    .contact-desc {
+        >p {
+            font-size: 16px;
+        }
+    }
+
     .contact-container {
         grid-template-columns: none;
         grid-template-rows: max-content;
         gap: 30px;
         padding: 0 7% 60px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact-info {
+        gap: 14px;
+        > h1 {
+            font-size: 38px;
+        }
+    }
+
+    .contact-apps {
+        gap: 8px;
+        >svg {
+            font-size: 24px;
+        }
+    }
+
+    .contact-desc {
+        >p {
+            font-size: 14px;
+        }
+    }
+
+    .contact-container {
+        gap: 20px;
     }
 }
