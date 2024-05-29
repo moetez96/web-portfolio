@@ -46,9 +46,10 @@ function Navbar({ handleThemeChange, isDark }) {
                 <div className="navbar-options">
                     <div className="navbar-light-dark-mode" onClick={handleThemeClick}>
                         {isDark ?
-                            (<DarkModeOutlined fontSize={'large'} />)
-                            :
                             (<LightModeOutlined fontSize={'large'} />)
+                            :
+                            (<DarkModeOutlined fontSize={'large'} />)
+
                         }
                     </div>
                     <button className="navbar-download-button">
