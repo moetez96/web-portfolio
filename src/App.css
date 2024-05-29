@@ -18,3 +18,8 @@ hr {
 p {
   color: var(--paragraph-color);
 }
+
+h1 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  letter-spacing: 1px;
+}

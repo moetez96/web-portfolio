@@ -14,10 +14,10 @@ function ProjectCard() {
                 </div>
             </div>
             <div className="project-card-overview">
-                <h1>Promotional landing page for our favorite show</h1>
+                <h2>Promotional landing page for our favorite show</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 <div className="project-card-info">
-                    <h2>Project Info</h2>
+                    <h2>PROJECT INFO</h2>
                     <hr/>
                     <p>Year</p>
                     <hr/>

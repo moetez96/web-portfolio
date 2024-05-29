@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "@fontsource/bebas-neue";
+import "@fontsource/manrope";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

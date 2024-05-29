@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/layout/Home";
 import Projects from "./components/layout/Projects";
 import Contact from "./components/layout/Contact";
+import About from "./components/layout/About";
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
@@ -23,6 +24,8 @@ function App() {
         <div className="App" data-theme={isDark ? "dark" : "light"}>
             <Navbar handleThemeChange={handleThemeChange} isDark={isDark}/>
             <Home />
+            <hr />
+            <About />
             <hr />
             <Projects />
             <hr />

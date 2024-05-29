@@ -45,10 +45,11 @@
 .project-card-overview {
     padding-left: 32px;
     padding-right: 32px;
-    >h1 {
-        font-size: 32px;
+    >h2 {
+        font-size: 28px;
         line-height: 100%;
         font-weight: normal;
+        margin: 0 0 10px;
     }
 
     >p {
@@ -115,8 +116,8 @@
     .project-card-overview {
         padding-left: 22px;
         padding-right: 22px;
-        >h1 {
-            font-size: 26px;
+        >h2 {
+            font-size: 24px;
             line-height: 100%;
         }
 
@@ -184,8 +185,8 @@
 
 @media (max-width: 425px) {
     .project-card-overview {
-        >h1 {
-            font-size: 24px;
+        >h2 {
+            font-size: 22px;
         }
 
         >p {
