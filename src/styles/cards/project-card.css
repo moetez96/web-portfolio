@@ -17,7 +17,7 @@
 
 .project-card-img-container:hover {
     transform: translateY(-10px);
-    filter: brightness(1.5);
+    filter: var(--brightness-color);
 }
 
 .project-card-img {
@@ -102,7 +102,7 @@
 
     >button:hover {
         transform: translateY(-4px);
-        filter: brightness(1.2);
+        filter: var(--brightness-color);
     }
 }
 

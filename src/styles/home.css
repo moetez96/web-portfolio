@@ -60,7 +60,7 @@
         height: 12px;
         background-color: #000;
         border-radius: 50%;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -82,7 +82,7 @@
     }
 
     > button:hover {
-        background-color: rgba(149, 169, 54, 0.8);
+        filter: var(--brightness-color);
     }
 }
 
