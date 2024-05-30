@@ -20,6 +20,7 @@ body {
   --nav-divider-color: #202528;
   --paragraph-color: #C7C7C7;
   --brightness-color: brightness(1.3);
+  --brightness-chip: brightness(0.7);
 }
 
 [data-theme="light"] {
@@ -33,4 +34,5 @@ body {
   --paragraph-color: #383838;
   --nav-divider-color: #DFDAD7;
   --brightness-color: brightness(0.7);
+  --brightness-chip: brightness(1.08);
 }

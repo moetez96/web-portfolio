@@ -1,7 +1,7 @@
-import "../../styles/about.css"
-function About() {
+import "../../styles/about.css";
 
-    return(
+function About() {
+    return (
         <div className="about-wrapper">
             <div className="about-container">
                 <h1>About Me</h1>
@@ -15,7 +15,9 @@ function About() {
                     SKILLS
                 </div>
                 <div className="about-skills-list">
-                    {placeHolederSkills.map((elem) => (<span className="skill-chip">{elem}</span>))}
+                    {placeHolederSkills.map((elem, index) => (
+                        <span className="skill-chip" style={{ '--i': index }} key={index}>{elem}</span>
+                    ))}
                 </div>
             </div>
         </div>
@@ -24,5 +26,4 @@ function About() {
 
 export default About;
 
-
-const placeHolederSkills = ["C","C--","C++","C#","C/AL","Caché ObjectScript","C Shell","Caml","Candle","Cayenne","CDuce","Cecil","Cel","Cesil","Ceylon","CFEngine","CFML","Cg","Ch","Chapel","CHAIN","Charity","Charm","Chef","CHILL","CHIP-8","chomski","ChucK","CICS","Cilk","CL","Claire","Clarion","Clean","Clipper","CLIST","Clojure","CLU","CMS-2","COBOL","Cobra","CODE","CoffeeScript","Cola","ColdC","ColdFusion","COMAL","Combined Programming Language", "Constraint Handling Rules","Converge","Cool","Coq","Coral 66","Corn","CorVision","COWSEL","CPL","csh","CSP","Csound","CUDA","Curl","Curry","Cyclone","Cython","D","DASL","DASL","Dart","DataFlex","Datalog","DATATRIEVE"];
+const placeHolederSkills = ["HTML", "CSS", "JavaScript", "React", "Node.js", "C","C--","C++","C#","C/AL","Caché ObjectScript","C Shell","Caml","Candle","Cayenne","CDuce","Cecil","Cel","Cesil","Ceylon","CFEngine","CFML","Cg","Ch","Chapel","CHAIN","Charity","Charm","Chef","CHILL","CHIP-8","chomski","ChucK","CICS","Cilk","CL","Claire","Clarion","Clean","Clipper","Converge","Cool","Coq","Coral 66","Corn","CorVision","COWSEL","CPL","csh","CSP","Csound","CUDA","Curl","Curry","Cyclone","Cython","D","DASL","DASL","Dart","DataFlex"];
