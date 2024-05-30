@@ -69,10 +69,10 @@
 
 @keyframes lightUp {
     0%, 100% {
-        filter: brightness(1);
+        border-color: var(--text-color);
     }
     50% {
-        filter: var(--brightness-chip);
+        border-color: var(--primary-background-color);
     }
 }
 
@@ -86,8 +86,8 @@
     font-weight: bold;
     width: max-content;
     border-radius: 40px;
-    animation: lightUp 1s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.1s);
+    animation: lightUp 5s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.5s);
 }
 
 @media (max-width: 1024px) {
