@@ -35,14 +35,12 @@ function Experience() {
                         <div className="experiences">
                             {experiences.map((exp, index) => (
                                 <div className="experience" key={index}>
-                                    <div className="experience-details" style={{left:
-                                        index % 2 === 0 ? "-495%" : "250%",
-                                        textAlign: index % 2 === 0 ? "right" : "left"}}>
+                                    <div className="experience-details">
                                         <div className="experience-title">{exp.title}</div>
                                         <div className="experience-date">{exp.date}</div>
                                     </div>
-                                    <div className="experience-card" style={{right:
-                                            index % 2 === 0 ? "-1700%" : "250%"}}></div>
+                                    <div className="experience-circle"></div>
+                                    <div className="experience-card"></div>
                                 </div>
                             ))}
                         </div>
