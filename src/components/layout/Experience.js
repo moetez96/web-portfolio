@@ -13,6 +13,10 @@ function Experience() {
         {
             title: "Job Title 3",
             date: "Jan 2018 - Dec 2018"
+        },
+        {
+            title: "Job Title 4",
+            date: "Jan 2017 - Dec 2017"
         }
     ];
 
@@ -31,11 +35,14 @@ function Experience() {
                         <div className="experiences">
                             {experiences.map((exp, index) => (
                                 <div className="experience" key={index}>
-                                    <div className="experience-details">
+                                    <div className="experience-details" style={{left:
+                                        index % 2 === 0 ? "-495%" : "250%",
+                                        textAlign: index % 2 === 0 ? "right" : "left"}}>
                                         <div className="experience-title">{exp.title}</div>
                                         <div className="experience-date">{exp.date}</div>
                                     </div>
-                                    <div className="experience-card"></div>
+                                    <div className="experience-card" style={{right:
+                                            index % 2 === 0 ? "-1700%" : "250%"}}></div>
                                 </div>
                             ))}
                         </div>
