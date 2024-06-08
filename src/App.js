@@ -5,6 +5,7 @@ import Home from "./components/layout/Home";
 import Projects from "./components/layout/Projects";
 import Contact from "./components/layout/Contact";
 import About from "./components/layout/About";
+import Experience from "./components/layout/Experience";
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
@@ -26,6 +27,8 @@ function App() {
             <Home />
             <hr />
             <About />
+            <hr />
+            <Experience />
             <hr />
             <Projects />
             <hr />
