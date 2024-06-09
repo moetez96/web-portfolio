@@ -3,20 +3,24 @@ import "../../styles/experience.css";
 function Experience() {
     const experiences = [
         {
-            title: "Job Title 1",
-            date: "Jan 2020 - Present"
+            year: 'Oct 2022 - Present',
+            title: 'Senior Web Developer at Tech Solutions',
+            description: 'Leading a team of developers to build scalable web applications.'
         },
         {
-            title: "Job Title 2",
-            date: "Jan 2019 - Dec 2019"
+            year: 'Jan 2022 - Sept 2022',
+            title: 'Web Developer at Creative Agency',
+            description: 'Developed dynamic websites and collaborated with designers to create engaging user experiences.'
         },
         {
-            title: "Job Title 3",
-            date: "Jan 2018 - Dec 2018"
+            year: 'Jun 2021 - Oct 2021',
+            title: 'Junior Web Developer at Startup Inc.',
+            description: 'Worked on various front-end and back-end tasks, gaining hands-on experience in web development.'
         },
         {
-            title: "Job Title 4",
-            date: "Jan 2017 - Dec 2017"
+            year: 'Jun 2020 - Oct 2020',
+            title: 'Intern at WebWorks',
+            description: 'Assisted in developing website components and learned about web technologies.'
         }
     ];
 
@@ -31,19 +35,18 @@ function Experience() {
                 </div>
 
                 <div className="experience-timeline-container">
-                    <div className="experience-timeline">
-                        <div className="experiences">
-                            {experiences.map((exp, index) => (
-                                <div className="experience" key={index}>
-                                    <div className="experience-details">
-                                        <div className="experience-title">{exp.title}</div>
-                                        <div className="experience-date">{exp.date}</div>
-                                    </div>
-                                    <div className="experience-circle"></div>
-                                    <div className="experience-card"></div>
+                    <div className="timeline">
+                        {experiences.map((exp, index) => (
+                            <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={index}>
+                                <div className="timeline-item-content">
+                                    <span className="tag">{exp.year}</span>
+                                    <h3>{exp.title}</h3>
+                                    <p>{exp.description}</p>
+                                    <span className="circle" />
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
+                        <div className="vertical-line"></div>
                     </div>
                 </div>
             </div>
