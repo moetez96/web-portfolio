@@ -20,16 +20,6 @@
 
 .profile-desc {
     width: 50%;
-     >h1 {
-         font-size: 7.5vw;
-         line-height: 90%;
-         padding: 0;
-         margin: 0;
-     }
-    >p {
-        font-size: 18px;
-        line-height: 150%;
-    }
 }
 
 .profile-contact-btns {
@@ -121,13 +111,6 @@
 
     .profile-desc {
         width: 48%;
-        >h1 {
-            font-size: 8vw;
-        }
-        >p {
-            font-size: 16px;
-            line-height: 120%;
-        }
     }
 
     .profile-contact-btns {
@@ -173,13 +156,6 @@
 
     .profile-desc {
         width: 100%;
-        >h1 {
-            font-size: 7vw;
-        }
-        >p {
-            font-size: 14px;
-            line-height: 110%;
-        }
     }
 
     .profile-pic-container {
@@ -196,12 +172,6 @@
 
     .home-container {
         gap: 20px;
-    }
-
-    .profile-desc {
-        >h1 {
-            font-size: 35px;
-        }
     }
 
     .profile-contact-btns {

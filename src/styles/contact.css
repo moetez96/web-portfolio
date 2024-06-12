@@ -20,17 +20,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    >h1 {
-        font-size: 5.5vw;
-        line-height: 100%;
-        padding: 0;
-        margin: 0;
-    }
 }
 
 .contact-desc {
     >p {
-        font-size: 18px;
         margin: 8px 1px;
 
         >span {
@@ -65,22 +58,12 @@
 @media (max-width: 768px) {
     .contact-info {
         gap: 18px;
-        > h1 {
-            font-size: 43px;
-        }
-
     }
 
     .contact-apps {
         gap: 10px;
         >svg {
             font-size: 28px;
-        }
-    }
-
-    .contact-desc {
-        >p {
-            font-size: 16px;
         }
     }
 
@@ -95,21 +78,12 @@
 @media (max-width: 425px) {
     .contact-info {
         gap: 14px;
-        > h1 {
-            font-size: 38px;
-        }
     }
 
     .contact-apps {
         gap: 8px;
         >svg {
             font-size: 24px;
-        }
-    }
-
-    .contact-desc {
-        >p {
-            font-size: 14px;
         }
     }
 

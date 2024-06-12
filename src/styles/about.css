@@ -13,29 +13,6 @@
     gap: 20px;
     max-width: 100%;
     padding: 0 7% 60px;
-
-    >h1 {
-        font-size: 5.5vw;
-        line-height: 100%;
-        padding: 0;
-        margin: 0;
-    }
-}
-
-.about-desc {
-
-    >h2 {
-        font-size: 28px;
-        line-height: 100%;
-        font-weight: normal;
-        margin: 0 0 10px;
-    }
-
-    >p {
-        font-size: 18px;
-        line-height: 130%;
-        margin: 0;
-    }
 }
 
 .about-skills-container {
@@ -120,22 +97,6 @@
     .about-container {
         grid-template-columns: none;
         grid-template-rows: max-content 1fr;
-
-        >h1 {
-            font-size: 43px;
-        }
-    }
-
-    .about-desc {
-
-        >h2 {
-            font-size: 24px;
-        }
-
-        >p {
-            font-size: 16px;
-            line-height: 120%;
-        }
     }
 
     .about-skills-list {
@@ -160,21 +121,6 @@
     }
 
     .about-container {
-
-        >h1 {
-            font-size: 38px;
-        }
-    }
-
-    .about-desc {
-
-        >h2 {
-            font-size: 22px;
-        }
-
-        >p {
-            font-size: 14px;
-        }
     }
 
     .about-skills-list {

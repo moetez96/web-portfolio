@@ -15,6 +15,11 @@
     z-index: 1;
 }
 
+
+.navbar-title {
+    font-size: xxx-large;
+}
+
 .navbar-menu-container {
     display: flex;
     justify-content: center;
@@ -130,13 +135,18 @@
     }
 
     .navbar-title {
-        font-size: x-large;
+        font-size: xx-large;
     }
 
     .navbar-download-button {
         font-size: 18px;
         width: 116px;
         height: 32px;
+    }
+
+    .navbar-menu {
+        gap: 8px;
+        font-size: 16px;
     }
 }
 
@@ -148,6 +158,10 @@
 
     .navbar-menu-icon {
         display: block;
+    }
+
+    .navbar-title {
+        font-size: x-large;
     }
 
     .navbar-menu-container {
@@ -184,6 +198,11 @@
 }
 
 @media (max-width: 375px) {
+
+    .navbar-title {
+        font-size: large;
+    }
+
     .navbar-wrapper {
         padding: 0 15px;
         height: 56px;
