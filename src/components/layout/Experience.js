@@ -1,24 +1,39 @@
+import React, { useState, useEffect } from "react";
 import "../../styles/experience.css";
 
 function Experience() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     const experiences = [
         {
-            year: 'Oct 2022 - Present',
+            date: 'Oct 2022 - Present',
             title: 'Senior Web Developer at Tech Solutions',
             description: 'Leading a team of developers to build scalable web applications.'
         },
         {
-            year: 'Jan 2022 - Sept 2022',
+            date: 'Jan 2022 - Sept 2022',
             title: 'Web Developer at Creative Agency',
             description: 'Developed dynamic websites and collaborated with designers to create engaging user experiences.'
         },
         {
-            year: 'Jun 2021 - Oct 2021',
+            date: 'Jun 2021 - Oct 2021',
             title: 'Junior Web Developer at Startup Inc.',
             description: 'Worked on various front-end and back-end tasks, gaining hands-on experience in web development.'
         },
         {
-            year: 'Jun 2020 - Oct 2020',
+            date: 'Jun 2020 - Oct 2020',
             title: 'Intern at WebWorks',
             description: 'Assisted in developing website components and learned about web technologies.'
         }
@@ -37,9 +52,12 @@ function Experience() {
                 <div className="experience-timeline-container">
                     <div className="timeline">
                         {experiences.map((exp, index) => (
-                            <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={index}>
+                            <div
+                                className={`timeline-item ${isMobile ? 'right' : index % 2 === 0 ? 'left' : 'right'}`}
+                                key={index}
+                            >
                                 <div className="timeline-item-content">
-                                    <span className="tag">{exp.year}</span>
+                                    <span className="tag">{exp.date}</span>
                                     <h3>{exp.title}</h3>
                                     <p>{exp.description}</p>
                                     <span className="circle" />
