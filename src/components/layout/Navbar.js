@@ -1,10 +1,11 @@
 import '../../styles/navbar.css';
 import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const navbarRef = useRef(null);
 
     const handleMenuOpen = () => {
         setNavMenuOpen(!navMenuOpen);
@@ -14,17 +15,27 @@ function Navbar({ handleThemeChange, isDark }) {
         setIsMobile(window.innerWidth <= 768);
     };
 
+    const handleClickOutside = (event) => {
+        if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+            setNavMenuOpen(false);
+        }
+    };
+
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
     const handleThemeClick = () => {
         handleThemeChange();
-    }
+    };
 
     return (
-        <div className="navbar-wrapper">
+        <div className="navbar-wrapper" ref={navbarRef}>
             <h1 className="navbar-title">Moetez Ayari</h1>
             <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
                 {navMenuOpen ? (
