@@ -1,10 +1,23 @@
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import {useInView} from "react-intersection-observer";
 
 function ExperienceCard({ exp, index }) {
     const controls = useAnimation();
     const { ref, inView } = useInView();
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         if (inView) {
@@ -14,7 +27,7 @@ function ExperienceCard({ exp, index }) {
 
     return (
         <motion.div
-            className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+            className={`timeline-item ${isMobile ? 'right' : index % 2 === 0 ? 'left' : 'right'}`}
             key={index}
             ref={ref}
             initial={{ opacity: 0, y: 100 }}
