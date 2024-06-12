@@ -1,11 +1,10 @@
-import { motion, useAnimation } from "framer-motion";
-import React, {useEffect, useState} from "react";
-import {useInView} from "react-intersection-observer";
+import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 function ExperienceCard({ exp, index }) {
-    const controls = useAnimation();
-    const { ref, inView } = useInView();
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     useEffect(() => {
         const handleResize = () => {
@@ -19,28 +18,26 @@ function ExperienceCard({ exp, index }) {
         };
     }, []);
 
-    useEffect(() => {
-        if (inView) {
-            controls.start({ opacity: 1, y: 0 });
-        }
-    }, [controls, inView]);
+    const animationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(100px)',
+        config: { duration: 600, delay: index * 200 + 800 }
+    });
 
     return (
-        <motion.div
+        <animated.div
             className={`timeline-item ${isMobile ? 'right' : index % 2 === 0 ? 'left' : 'right'}`}
             key={index}
             ref={ref}
-            initial={{ opacity: 0, y: 100 }}
-            animate={controls}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            style={animationProps}
         >
             <div className="timeline-item-content">
-                <span className="tag">{exp.date}</span>
-                <h3>{exp.title}</h3>
-                <p>{exp.description}</p>
-                <span className="circle" />
+                <animated.span className="tag">{exp.date}</animated.span>
+                <animated.h3 style={{ opacity: animationProps.opacity }}>{exp.title}</animated.h3>
+                <animated.p style={{ opacity: animationProps.opacity }}>{exp.description}</animated.p>
+                <animated.span className="circle" />
             </div>
-        </motion.div>
+        </animated.div>
     );
 }
 

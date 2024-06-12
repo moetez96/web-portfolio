@@ -1,12 +1,30 @@
 import "../../styles/contact.css";
 import "../../styles/form.css";
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
+import React from "react";
 
 function Contact() {
+    const [infoRef, infoInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+    const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+    const infoAnimation = useSpring({
+        opacity: infoInView ? 1 : 0,
+        transform: infoInView ? 'translateY(0)' : 'translateY(20px)',
+        config: { duration: 500 },
+    });
+
+    const formAnimation = useSpring({
+        opacity: formInView ? 1 : 0,
+        transform: formInView ? 'translateY(0)' : 'translateY(20px)',
+        config: { duration: 500 },
+    });
+
     return (
         <div className="contact-wrapper">
             <div className="contact-container">
-                <div className="contact-info">
+                <animated.div ref={infoRef} style={infoAnimation} className="contact-info">
                     <h1>Let’s connect</h1>
                     <span className="contact-desc">
                         <p>Say hello at <span>moetez22@gmail.com</span></p>
@@ -16,9 +34,9 @@ function Contact() {
                         <LinkedIn />
                         <GitHub />
                     </div>
-                </div>
+                </animated.div>
 
-                <form className="contact-form">
+                <animated.form ref={formRef} style={formAnimation} className="contact-form">
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" name="name" required />
@@ -36,7 +54,7 @@ function Contact() {
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit">Submit</button>
-                </form>
+                </animated.form>
             </div>
         </div>
     );

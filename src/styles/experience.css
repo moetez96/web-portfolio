@@ -16,19 +16,6 @@
     width: 600px;
 }
 
-.experience-header > h1 {
-    font-size: 5.5vw;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.experience-header > p {
-    font-size: 18px;
-    line-height: 150%;
-    font-weight: normal;
-}
-
 .experience-timeline-container {
     width: 100%;
     display: flex;
@@ -64,19 +51,6 @@
         width: 450px;
     }
 
-    .experience-header > p {
-        font-size: 16px;
-        line-height: 120%;
-    }
-
-    .experience-header > h1 {
-        font-size: 43px;
-    }
-
-    .experience-header > p {
-        font-size: 14px;
-    }
-
     .experience-header {
         width: 80%;
     }
@@ -102,9 +76,5 @@
 
     .experience-header {
         width: 100%;
-    }
-
-    .experience-header > h1 {
-        font-size: 38px;
     }
 }

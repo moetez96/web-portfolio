@@ -29,7 +29,7 @@
     padding: 8px 14px;
     width: max-content;
     border-radius: 12px;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     font-weight: bolder;
     border: 2px solid var(--text-color);
     line-height: 100%;

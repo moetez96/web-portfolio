@@ -1,6 +1,6 @@
 import "../../styles/experience.css";
 import "../../styles/cards/experience-card.css";
-import { motion, useAnimation } from "framer-motion";
+import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import React from "react";
 import ExperienceCard from "../cards/ExperienceCard";
@@ -29,40 +29,45 @@ function Experience() {
         }
     ];
 
-    const controls = useAnimation();
-    const { ref, inView } = useInView();
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-    React.useEffect(() => {
-        if (inView) {
-            controls.start({ opacity: 1, y: 0 });
-        }
-    }, [controls, inView]);
+    const animationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+        config: { duration: 500 }
+    });
+
+    const headerAnimationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateX(0)' : 'translateX(-20px)',
+        config: { duration: 500 }
+    });
 
     return (
         <div className="experience-wrapper">
             <div className="experience-container">
-                <div className="experience-header">
+                <animated.div style={headerAnimationProps} className="experience-header">
                     <h1>Experience</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Et magnis dis parturient montes nascetur ridiculus mus
                         mauris vitae</p>
-                </div>
+                </animated.div>
 
                 <div className="experience-timeline-container" ref={ref}>
-                    <motion.div
-                        className="timeline"
-                        animate={controls}
-                    >
+                    <animated.div style={animationProps} className="timeline">
                         {experiences.map((exp, index) => (
                             <ExperienceCard exp={exp} index={index} key={index} />
                         ))}
-                        <motion.div
+                        <animated.div
                             className="vertical-line"
-                            initial={{ scaleY: 0 }}
-                            animate={{ scaleY: 1 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            style={{
+                                transform: animationProps.transform.interpolate(
+                                    t => `scaleY(${inView ? 1 : 0})`
+                                ),
+                                transition: 'transform 0.6s 0.3s'
+                            }}
                         />
-                    </motion.div>
+                    </animated.div>
                 </div>
             </div>
         </div>
