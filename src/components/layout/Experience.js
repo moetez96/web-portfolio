@@ -1,20 +1,7 @@
-import React, { useState, useEffect } from "react";
 import "../../styles/experience.css";
+import ExperienceCard from "../cards/ExperienceCard";
 
 function Experience() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     const experiences = [
         {
@@ -52,17 +39,7 @@ function Experience() {
                 <div className="experience-timeline-container">
                     <div className="timeline">
                         {experiences.map((exp, index) => (
-                            <div
-                                className={`timeline-item ${isMobile ? 'right' : index % 2 === 0 ? 'left' : 'right'}`}
-                                key={index}
-                            >
-                                <div className="timeline-item-content">
-                                    <span className="tag">{exp.date}</span>
-                                    <h3>{exp.title}</h3>
-                                    <p>{exp.description}</p>
-                                    <span className="circle" />
-                                </div>
-                            </div>
+                            <ExperienceCard exp={exp} index={index}/>
                         ))}
                         <div className="vertical-line"></div>
                     </div>

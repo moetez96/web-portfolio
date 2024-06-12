@@ -54,79 +54,6 @@
     transform: translateX(-50%);
 }
 
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px 0;
-    box-sizing: border-box;
-}
-
-.timeline-item.left {
-    left: 0;
-    padding-right: 100px;
-}
-
-.timeline-item.right {
-    left: 50%;
-    padding-left: 60px;
-    padding-right: 40px;
-}
-
-.timeline-item-content {
-    background-color: var(--secondary-background-color);
-    border-radius: 6px;
-    padding: 20px;
-    width: 100%;
-    height: max-content;
-    position: relative;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-item-content .tag {
-    display: inline-block;
-    background-color: var(--primary-background-color);
-    color: var(--text-color);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.timeline-item-content h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-.timeline-item-content p {
-    margin: 0;
-}
-
-.timeline-item-content .circle {
-    background-color: var(--secondary-background-color);
-    border-radius: 50%;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 20px;
-}
-
-.timeline-item.left .timeline-item-content {
-    margin-right: auto;
-}
-
-.timeline-item.right .timeline-item-content {
-    margin-left: auto;
-}
-
-.timeline-item.left .circle {
-    right: -40px;
-}
-
-.timeline-item.right .circle {
-    left: -40px;
-}
-
 @media (max-width: 1024px) {
 
     .timeline {
@@ -153,20 +80,6 @@
     .experience-header {
         width: 80%;
     }
-
-    .timeline-item-content .tag {
-        font-size: 12px;
-        margin-bottom: 8px;
-    }
-
-    .timeline-item-content h3 {
-        margin-top: 0;
-        font-size: 18px;
-    }
-
-    .timeline-item-content p {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -183,37 +96,9 @@
     .timeline .vertical-line {
         left: 0;
     }
-    .timeline-item {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .timeline-item-content {
-        padding: 10px 12px;
-    }
-
-    .timeline-item-content .circle {
-        width: 25px;
-        height: 25px;
-        top: 10px;
-    }
-
-    .timeline-item.right {
-        left: 0;
-        padding-left: 50px;
-    }
 }
 
 @media (max-width: 425px) {
-
-    .timeline-item-content .tag {
-        font-size: 10px;
-        margin-bottom: 6px;
-    }
-
-    .timeline-item-content h3 {
-        font-size: 16px;
-    }
 
     .experience-header {
         width: 100%;
