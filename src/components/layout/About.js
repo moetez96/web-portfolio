@@ -35,7 +35,7 @@ function About() {
     });
 
     return (
-        <div className="about-wrapper" ref={ref}>
+        <div className="about-wrapper" ref={ref} id="about">
             <div className="about-container">
                 <animated.h1 style={headerSpring}>About Me</animated.h1>
                 <animated.div style={descSpring} className="about-desc">

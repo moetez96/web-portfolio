@@ -18,6 +18,7 @@
 
 .navbar-title {
     font-size: xxx-large;
+    cursor: pointer;
 }
 
 .navbar-menu-container {

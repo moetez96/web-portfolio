@@ -22,7 +22,7 @@ function Contact() {
     });
 
     return (
-        <div className="contact-wrapper">
+        <div className="contact-wrapper" id="contact">
             <div className="contact-container">
                 <animated.div ref={infoRef} style={infoAnimation} className="contact-info">
                     <h1>Let’s connect</h1>

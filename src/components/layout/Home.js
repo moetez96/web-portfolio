@@ -32,7 +32,7 @@ function Home() {
     });
 
     return (
-        <div className="home-wrapper">
+        <div className="home-wrapper" id="home">
             <div className="home-container" ref={ref}>
                 <div className="profile-desc">
                     {trail.map((style, index) => {

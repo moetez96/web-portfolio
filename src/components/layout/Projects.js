@@ -30,7 +30,7 @@ function Projects() {
     });
 
     return (
-        <div className="projects-wrapper">
+        <div className="projects-wrapper" id="projects">
             <div className="projects-container" ref={ref}>
                 <animated.div style={headerAnimationProps} className="projects-header">
                     <h1>Featured Projects</h1>

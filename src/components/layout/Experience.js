@@ -49,7 +49,7 @@ function Experience() {
     });
 
     return (
-        <div className="experience-wrapper">
+        <div className="experience-wrapper" id="experience">
             <div className="experience-container">
                 <animated.div style={headerAnimationProps} className="experience-header">
                     <h1>Experience</h1>
