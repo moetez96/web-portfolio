@@ -36,6 +36,9 @@ function ExperienceCard({ exp, index }) {
                 <animated.h3 style={{ opacity: animationProps.opacity }}>{exp.title}</animated.h3>
                 <animated.p style={{ opacity: animationProps.opacity }}>{exp.description}</animated.p>
                 <animated.span className="circle" />
+                <div className="tech">
+                    <p>{' '} {exp.technologies}</p>
+                </div>
             </div>
         </animated.div>
     );
