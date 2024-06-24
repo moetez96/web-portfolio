@@ -4,13 +4,8 @@ import { useInView } from "react-intersection-observer";
 import React from "react";
 
 const placeHolderSkills = [
-    "HTML", "CSS", "JavaScript", "React", "Node.js", "C", "C--", "C++", "C#", "C/AL",
-    "Caché ObjectScript", "C Shell", "Caml", "Candle", "Cayenne", "CDuce", "Cecil",
-    "Cel", "Cesil", "Ceylon", "CFEngine", "CFML", "Cg", "Ch", "Chapel", "CHAIN",
-    "Charity", "Charm", "Chef", "CHILL", "CHIP-8", "chomski", "ChucK", "CICS", "Cilk",
-    "CL", "Claire", "Clarion", "Clean", "Clipper", "Converge", "Cool", "Coq", "Coral 66",
-    "Corn", "CorVision", "COWSEL", "CPL", "csh", "CSP", "Csound", "CUDA", "Curl", "Curry",
-    "Cyclone", "Cython", "D", "DASL", "DASL", "Dart", "DataFlex"
+    "JavaScript", "Java", "Python", "TypeScript", "Node.js", "HTML", "CSS", "ReactJS", "ExpressJS", "SpringBoot",
+    "Angular", "MySQL", "MongoDB", "PostgreSQL"
 ];
 
 function About() {
@@ -44,8 +39,13 @@ function About() {
             <div className="about-container">
                 <animated.h1 style={headerSpring}>About Me</animated.h1>
                 <animated.div style={descSpring} className="about-desc">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>Full-Stack Developer | Passionate About Software Development</h2>
+                    <p>
+                        I am Full-Stack Developer from Tunisia, with a strong foundation in computer science and engineering from ESPRIT.
+                        My journey in software development began with a fascination for coding languages like JavaScript, Java, and Python, which I've refined alongside frameworks such as ReactJS, Angular, and SpringBoot.
+                        I thrive on crafting intuitive user experiences and exploring the latest in frontend and backend technologies.
+                        Always eager to learn and grow, I am constantly seeking new skills and exploring diverse aspects of design and development.                    *
+                    </p>
                 </animated.div>
             </div>
             <div className="about-skills-container">

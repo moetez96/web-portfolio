@@ -8,24 +8,29 @@ import ExperienceCard from "../cards/ExperienceCard";
 function Experience() {
     const experiences = [
         {
-            date: 'Oct 2022 - Present',
-            title: 'Senior Web Developer at Tech Solutions',
-            description: 'Leading a team of developers to build scalable web applications.'
+            date: 'October 2022 – Present',
+            title: 'Deloitte Tunisia - Full Stack Developer',
+            description: 'I participated in developing a BMW application focused on damage management during car transportation, contributing to the migration from monolithic to microservices architecture while gaining insights into best practices. I also played a role in enhancing the user interface to improve system functionality and user experience, gaining valuable experience in both backend and frontend development within a collaborative team setting.'
         },
         {
-            date: 'Jan 2022 - Sept 2022',
-            title: 'Web Developer at Creative Agency',
-            description: 'Developed dynamic websites and collaborated with designers to create engaging user experiences.'
+            date: ' February 2022- August 2022',
+            title: 'Orange Digital Center - End of Study Internship',
+            description: 'Development of a candidates sourcing website that aims to offer enterprises a more fleshed out image of their potential candidates, and opennew opportunities for candidates to better reach new recruiters.'
         },
         {
-            date: 'Jun 2021 - Oct 2021',
-            title: 'Junior Web Developer at Startup Inc.',
-            description: 'Worked on various front-end and back-end tasks, gaining hands-on experience in web development.'
+            date: 'July 2021- August 2021',
+            title: 'ESPRIT TECH RDI - Summer Internship',
+            description: 'Development of a personalized E-Learning platform that aims to provide users with specific courses related to their fields of specialization'
         },
         {
-            date: 'Jun 2020 - Oct 2020',
-            title: 'Intern at WebWorks',
-            description: 'Assisted in developing website components and learned about web technologies.'
+            date: 'January 2019 – June 2019',
+            title: 'ISI KEF - End of Study Internship',
+            description: 'Development of a mobile application for university events, courses and forums.'
+        },
+        {
+            date: 'June 2018 – August 2018',
+            title: 'Cryptec - Summer Internship',
+            description: 'Development of a management Desktop application for employees schedules and machines dysfunctions in the workspace.'
         }
     ];
 
@@ -48,9 +53,6 @@ function Experience() {
             <div className="experience-container">
                 <animated.div style={headerAnimationProps} className="experience-header">
                     <h1>Experience</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Et magnis dis parturient montes nascetur ridiculus mus
-                        mauris vitae</p>
                 </animated.div>
 
                 <div className="experience-timeline-container" ref={ref}>
