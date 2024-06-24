@@ -31,6 +31,10 @@ function Home() {
         from: { opacity: 0, x: 20 },
     });
 
+    const handleContactButtonClick = () => {
+        window.location.href = "mailto:moetez22@gmail.com";
+    };
+
     return (
         <div className="home-wrapper" id="home">
             <div className="home-container" ref={ref}>
@@ -52,14 +56,14 @@ function Home() {
                         return null;
                     })}
                     <span className="profile-contact-btns">
-                        <animated.button style={contactTrail[0]}>
+                        <button onClick={handleContactButtonClick} style={contactTrail[0]} className="contact-button">
                             Contact Me
                             <div className="circle">
                                 <span>
                                     <ArrowOutward fontSize={'medium'} />
                                 </span>
                             </div>
-                        </animated.button>
+                        </button>
                         <animated.div style={contactTrail[1]} className="contact-icons">
                             <a href="https://github.com/moetez96" target="_blank" rel="noopener noreferrer">
                                 <GitHub fontSize={'large'} />
@@ -74,7 +78,7 @@ function Home() {
                 </div>
 
                 <animated.div style={profilePicSpring} className="profile-pic-container">
-                    {/* Add your profile picture here */}
+
                 </animated.div>
             </div>
         </div>

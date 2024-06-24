@@ -27,7 +27,7 @@ function Contact() {
                 <animated.div ref={infoRef} style={infoAnimation} className="contact-info">
                     <h1>Let’s connect</h1>
                     <span className="contact-desc">
-                        <p>Say hello at <span>moetez22@gmail.com</span></p>
+                        <p>Say hello at <a href="mailto:moetez22@gmail.com">moetez22@gmail.com</a></p>
                         <p>For more info, here’s my <span>resume</span></p>
                     </span>
                     <div className="contact-apps">

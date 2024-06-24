@@ -26,14 +26,16 @@
     >p {
         margin: 8px 1px;
 
-        >span {
+        >span, >a {
             padding: 0 1px;
             border-bottom: 1px solid #B2D630;
             cursor: pointer;
             transition: filter 1s ease;
+            color: inherit;
+            text-decoration: none;
         }
 
-        >span:hover {
+        >span:hover, >a:hover {
             filter: var(--brightness-color);
         }
     }
