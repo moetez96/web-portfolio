@@ -43,15 +43,26 @@
     display: flex;
     gap: 15px;
     color: #B2D630;
-    >svg {
-        font-size: 32px;
-        cursor: pointer;
+
+    >a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
         transition: transform 0.4s ease, filter 0.3s ease;
     }
 
-    >svg:hover {
+    >a:hover {
         filter: var(--brightness-color);
         transform: translateY(-4px);
+    }
+
+    >svg {
+        font-size: 32px;
+        cursor: pointer;
     }
 }
 
@@ -62,7 +73,8 @@
 
     .contact-apps {
         gap: 10px;
-        >svg {
+
+        >a >svg {
             font-size: 28px;
         }
     }
@@ -82,7 +94,8 @@
 
     .contact-apps {
         gap: 8px;
-        >svg {
+
+        >a >svg {
             font-size: 24px;
         }
     }

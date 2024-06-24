@@ -61,10 +61,14 @@ function Home() {
                             </div>
                         </animated.button>
                         <animated.div style={contactTrail[1]} className="contact-icons">
-                            <GitHub fontSize={'large'} />
+                            <a href="https://github.com/moetez96" target="_blank" rel="noopener noreferrer">
+                                <GitHub fontSize={'large'} />
+                            </a>
                         </animated.div>
                         <animated.div style={contactTrail[2]} className="contact-icons">
-                            <LinkedIn fontSize={'large'} />
+                            <a href="https://www.linkedin.com/in/moetez-ayari-22b1031b2/" target="_blank" rel="noopener noreferrer">
+                                <LinkedIn fontSize={'large'} />
+                            </a>
                         </animated.div>
                     </span>
                 </div>

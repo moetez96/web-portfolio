@@ -31,8 +31,12 @@ function Contact() {
                         <p>For more info, here’s my <span>resume</span></p>
                     </span>
                     <div className="contact-apps">
-                        <LinkedIn />
-                        <GitHub />
+                        <a href="https://www.linkedin.com/in/moetez-ayari-22b1031b2/" target="_blank" rel="noopener noreferrer">
+                            <LinkedIn />
+                        </a>
+                        <a href="https://github.com/moetez96" target="_blank" rel="noopener noreferrer">
+                            <GitHub />
+                        </a>
                     </div>
                 </animated.div>
 
