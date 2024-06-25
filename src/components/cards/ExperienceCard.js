@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, useSprings } from "react-spring";
 import { useInView } from "react-intersection-observer";
+import {easeCubicIn} from "d3-ease";
 
 function ExperienceCard({ exp, index }) {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -24,6 +25,20 @@ function ExperienceCard({ exp, index }) {
         config: { duration: 600, delay: index * 200 + 800 }
     });
 
+    const baseScale = 1;
+    const baseOpacity = 0.2;
+
+    const [springs] = useSprings(3, index => ({
+        from: { scale: baseScale, opacity: 1 },
+        to: async next => {
+            while (1) {
+                await next({ scale: 1.5, opacity: baseOpacity, config: { duration: 2400, easing: easeCubicIn } });
+                await next({ scale: baseScale, opacity: 1, config: { duration: 0 } });
+            }
+        },
+        delay: index * 400
+    }));
+
     return (
         <animated.div
             className={`timeline-item ${isMobile ? 'right' : index % 2 === 0 ? 'left' : 'right'}`}
@@ -35,7 +50,10 @@ function ExperienceCard({ exp, index }) {
                 <animated.span className="tag">{exp.date}</animated.span>
                 <animated.h3 style={{ opacity: animationProps.opacity }}>{exp.title}</animated.h3>
                 <animated.p style={{ opacity: animationProps.opacity }}>{exp.description}</animated.p>
-                <animated.span className="circle" />
+                {springs.map((props, i) => (
+                    <animated.span key={i} className={`circle ${index === 0 ? 'active' : ''}`}
+                                   style={index === 0 ? { transform: props.scale.to(s => `scale(${s})`), opacity: props.opacity } : {}} />
+                ))}
                 <div className="tech">
                     <p>{' '} {exp.technologies}</p>
                 </div>

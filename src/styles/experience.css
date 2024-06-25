@@ -39,6 +39,7 @@
     width: 6px;
     background-color: var(--secondary-background-color);
     transform: translateX(-50%);
+    z-index: -1;
 }
 
 @media (max-width: 1024px) {
@@ -77,4 +78,5 @@
     .experience-header {
         width: 100%;
     }
+
 }

@@ -7,12 +7,12 @@
 
 .timeline-item.left {
     left: 0;
-    padding-right: 100px;
+    padding-right: 90px;
 }
 
 .timeline-item.right {
     left: 50%;
-    padding-left: 66px;
+    padding-left: 56px;
     padding-right: 40px;
 }
 
@@ -54,6 +54,11 @@
     height: 30px;
     top: 20px;
 }
+
+.circle.active {
+    background-color: #B2D630;
+}
+
 
 .timeline-item.left .timeline-item-content {
     margin-right: auto;
@@ -142,7 +147,11 @@
 
     .timeline-item.right {
         left: 0;
-        padding-left: 50px;
+        padding-left: 51px;
+    }
+
+    .timeline-item.right .circle {
+        left: -35px;
     }
 }
 
@@ -167,7 +176,13 @@
         font-size: 16px;
     }
 
-    .timeline-item-content .circle {
-       display: none;
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item.right .circle {
+        top: -10px;
+        left: -10px;
+        z-index: 2;
     }
 }
