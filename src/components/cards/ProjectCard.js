@@ -1,17 +1,11 @@
 import "../../styles/cards/project-card.css";
 import { ArrowOutwardOutlined, GitHub } from "@mui/icons-material";
-import { useSpring, animated } from "react-spring";
-import { useInView } from "react-intersection-observer";
+import { animated } from "react-spring";
 import React from "react";
+import {useProjectCardAnimation} from "../../Utils/Animations";
 
 function ProjectCard() {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-    const animationProps = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(20px)',
-        config: { duration: 500 },
-    });
+    const { ref, animationProps } = useProjectCardAnimation();
 
     return (
         <animated.div ref={ref} style={animationProps} className="project-card-container">

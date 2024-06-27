@@ -112,6 +112,7 @@
     width: 500px;
     height: 600px;
     border-radius: 16px;
+    object-fit: cover;
 }
 
 @media (max-width: 1024px) {

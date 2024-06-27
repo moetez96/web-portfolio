@@ -1,38 +1,17 @@
 import "../../styles/home.css";
 import { ArrowOutward, GitHub, LinkedIn } from "@mui/icons-material";
-import { useSpring, animated, useTrail } from "react-spring";
-import { useInView } from "react-intersection-observer";
+import { animated } from "react-spring";
+import picture from '../../styles/assets/Photo.png';
 import React from "react";
+import {useHomeAnimations} from "../../Utils/Animations";
+import resume from "../../Utils/resume.json";
 
 function Home() {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    const profilePicSpring = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateX(0)' : 'translateX(20px)',
-        config: { duration: 500 }
-    });
-
-    const trail = useTrail(3, {
-        config: { mass: 5, tension: 2000, friction: 600 },
-        opacity: inView ? 1 : 0,
-        x: inView ? 0 : 20,
-        from: { opacity: 0, x: 20 },
-        delay: 200,
-    });
-
-    const contactTrail = useTrail(3, {
-        config: { mass: 5, tension: 2000, friction: 200 },
-        opacity: inView ? 1 : 0,
-        x: inView ? 0 : 20,
-        from: { opacity: 0, x: 20 },
-    });
+    const { ref, contactTrail, trail, profilePicSpring }
+        = useHomeAnimations();
 
     const handleContactButtonClick = () => {
-        window.location.href = "mailto:moetez22@gmail.com";
+        window.location.href = `mailto:${resume.socials.email}`;
     };
 
     return (
@@ -49,7 +28,7 @@ function Home() {
                         if (index === 2) {
                             return (
                                 <animated.p style={style} key={index}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    {resume.home.introduction}
                                 </animated.p>
                             );
                         }
@@ -65,21 +44,21 @@ function Home() {
                             </div>
                         </button>
                         <animated.div style={contactTrail[1]} className="contact-icons">
-                            <a href="https://github.com/moetez96" target="_blank" rel="noopener noreferrer">
+                            <a href={resume.socials.github} target="_blank" rel="noopener noreferrer">
                                 <GitHub fontSize={'large'} />
                             </a>
                         </animated.div>
                         <animated.div style={contactTrail[2]} className="contact-icons">
-                            <a href="https://www.linkedin.com/in/moetez-ayari-22b1031b2/" target="_blank" rel="noopener noreferrer">
+                            <a href={resume.socials.linkedin} target="_blank" rel="noopener noreferrer">
                                 <LinkedIn fontSize={'large'} />
                             </a>
                         </animated.div>
                     </span>
                 </div>
 
-                <animated.div style={profilePicSpring} className="profile-pic-container">
+                <animated.img style={profilePicSpring} className="profile-pic-container" src={picture}>
 
-                </animated.div>
+                </animated.img>
             </div>
         </div>
     );

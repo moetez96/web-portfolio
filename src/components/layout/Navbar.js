@@ -1,7 +1,7 @@
 import '../../styles/navbar.css';
 import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-material";
 import { useState, useEffect, useRef } from "react";
-import { Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);

@@ -1,25 +1,13 @@
 import "../../styles/contact.css";
 import "../../styles/form.css";
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { useSpring, animated } from "react-spring";
-import { useInView } from "react-intersection-observer";
+import { animated } from "react-spring";
 import React from "react";
+import {useContactAnimations} from "../../Utils/Animations";
+import resume from "../../Utils/resume.json";
 
 function Contact() {
-    const [infoRef, infoInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-    const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-    const infoAnimation = useSpring({
-        opacity: infoInView ? 1 : 0,
-        transform: infoInView ? 'translateY(0)' : 'translateY(20px)',
-        config: { duration: 500 },
-    });
-
-    const formAnimation = useSpring({
-        opacity: formInView ? 1 : 0,
-        transform: formInView ? 'translateY(0)' : 'translateY(20px)',
-        config: { duration: 500 },
-    });
+    const { infoRef, infoAnimation, formRef, formAnimation } = useContactAnimations();
 
     return (
         <div className="contact-wrapper" id="contact">
@@ -27,14 +15,14 @@ function Contact() {
                 <animated.div ref={infoRef} style={infoAnimation} className="contact-info">
                     <h1>Let’s connect</h1>
                     <span className="contact-desc">
-                        <p>Say hello at <a href="mailto:moetez22@gmail.com">moetez22@gmail.com</a></p>
+                        <p>Say hello at <a href={`mailto:${resume.socials.email}`}>{resume.socials.email}</a></p>
                         <p>For more info, here’s my <span>resume</span></p>
                     </span>
                     <div className="contact-apps">
-                        <a href="https://www.linkedin.com/in/moetez-ayari-22b1031b2/" target="_blank" rel="noopener noreferrer">
+                        <a href={resume.socials.linkedin} target="_blank" rel="noopener noreferrer">
                             <LinkedIn />
                         </a>
-                        <a href="https://github.com/moetez96" target="_blank" rel="noopener noreferrer">
+                        <a href={resume.socials.github} target="_blank" rel="noopener noreferrer">
                             <GitHub />
                         </a>
                     </div>
