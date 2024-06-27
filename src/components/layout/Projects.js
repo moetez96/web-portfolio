@@ -6,7 +6,7 @@ import {useProjectsAnimations} from "../../Utils/Animations";
 import resume from "../../Utils/resume.json";
 
 function Projects() {
-    const { ref, headerAnimationProps, listprojectAnimationProps } = useProjectsAnimations(resume.projects.list.length);
+    const { ref, headerAnimationProps, listProjectAnimationProps } = useProjectsAnimations(resume.projects.list.length);
 
     return (
         <div className="projects-wrapper" id="projects">
@@ -16,9 +16,9 @@ function Projects() {
                     <p>{resume.projects.description}</p>
                 </animated.div>
                 <div className="projects-list-container">
-                    {listprojectAnimationProps.map((style, index) => (
+                    {listProjectAnimationProps.map((style, index) => (
                         <animated.div key={resume.projects.list[index].id} style={style}>
-                            <ProjectCard title={resume.projects.list[index].title} />
+                            <ProjectCard project={resume.projects.list[index]} />
                         </animated.div>
                     ))}
                 </div>

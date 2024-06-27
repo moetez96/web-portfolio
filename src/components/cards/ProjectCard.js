@@ -4,36 +4,45 @@ import { animated } from "react-spring";
 import React from "react";
 import {useProjectCardAnimation} from "../../Utils/Animations";
 
-function ProjectCard() {
+function ProjectCard({project}) {
     const { ref, animationProps } = useProjectCardAnimation();
+
+    const handleButtonClick = (link) => {
+        window.open(link, "_blank");
+    };
 
     return (
         <animated.div ref={ref} style={animationProps} className="project-card-container">
             <div className="project-card-img-container">
-                <div className="project-card-tag">
-                    Conceptual Work
+                <div className="project-card-tag-container">
+                    {project.technologies.map((tech) => (
+                        <div className="project-card-tag">
+                            {tech}
+                        </div>
+                    ))}
                 </div>
                 <div className="project-card-img"></div>
             </div>
             <div className="project-card-overview">
-                <h2>Promotional landing page for our favorite show</h2>
+                <h2>{project.title}</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    {project.description}
                 </p>
                 <div className="project-card-info">
-                    <h3>PROJECT INFO</h3>
+                    <h3>Features</h3>
                     <hr />
-                    <p>Year</p>
-                    <hr />
-                    <p>Role</p>
+                    {project.features.map((feature) => (
+                        <p>{feature}</p>
+                    ))}
                     <hr />
                 </div>
                 <div className="project-card-btns">
-                    <button>
-                        LIVE DEMO <ArrowOutwardOutlined />
-                    </button>
-                    <button>
+                    {(project.demo != null && project.demo !== "") && (
+                        <button onClick={() => handleButtonClick(project.demo)}>
+                            LIVE DEMO <ArrowOutwardOutlined />
+                        </button>
+                    )}
+                    <button onClick={() => handleButtonClick(project.source)}>
                         SEE ON GITHUB <GitHub />
                     </button>
                 </div>

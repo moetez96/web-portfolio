@@ -1,7 +1,7 @@
 import "../../styles/home.css";
 import { ArrowOutward, GitHub, LinkedIn } from "@mui/icons-material";
 import { animated } from "react-spring";
-import picture from '../../styles/assets/Photo.png';
+import picture from '../../assets/Photo.png';
 import React from "react";
 import {useHomeAnimations} from "../../Utils/Animations";
 import resume from "../../Utils/resume.json";

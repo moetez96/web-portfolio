@@ -125,13 +125,13 @@ export const useProjectsAnimations = (projectsLength) => {
         config: { duration: 600 }
     });
 
-    const listprojectAnimationProps = useTrail(projectsLength, {
+    const listProjectAnimationProps = useTrail(projectsLength, {
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateY(0)' : 'translateY(20px)',
         config: { duration: 600, delay: 200 }
     });
 
-    return { ref, headerAnimationProps, listprojectAnimationProps };
+    return { ref, headerAnimationProps, listProjectAnimationProps };
 };
 
 export const useExperienceCardAnimations = (index, projectsLength) => {

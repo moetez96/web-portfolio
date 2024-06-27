@@ -1,7 +1,8 @@
 import '../../styles/navbar.css';
 import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-material";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-scroll';
+import cv from '../../assets/Moetez_Ayari_CV.pdf';
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
@@ -38,6 +39,21 @@ function Navbar({ handleThemeChange, isDark }) {
         setNavMenuOpen(false);
     };
 
+    const handleDownloadCV = () => {
+        fetch(cv)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Moetez_Ayari_CV.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            })
+            .catch(error => console.error('Error downloading CV:', error));
+    };
 
     return (
         <div className="navbar-wrapper" ref={navbarRef}>
@@ -88,7 +104,8 @@ function Navbar({ handleThemeChange, isDark }) {
 
                         }
                     </div>
-                    <button className="navbar-download-button">
+
+                    <button className="navbar-download-button" onClick={handleDownloadCV}>
                         Download CV
                     </button>
                 </div>
