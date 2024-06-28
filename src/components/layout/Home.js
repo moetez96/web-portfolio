@@ -35,14 +35,14 @@ function Home() {
                         return null;
                     })}
                     <span className="profile-contact-btns">
-                        <button onClick={handleContactButtonClick} style={contactTrail[0]} className="contact-button">
+                        <animated.button onClick={handleContactButtonClick} style={contactTrail[0]} className="contact-button">
                             Contact Me
                             <div className="circle">
                                 <span>
                                     <ArrowOutward fontSize={'medium'} />
                                 </span>
                             </div>
-                        </button>
+                        </animated.button>
                         <animated.div style={contactTrail[1]} className="contact-icons">
                             <a href={resume.socials.github} target="_blank" rel="noopener noreferrer">
                                 <GitHub fontSize={'large'} />

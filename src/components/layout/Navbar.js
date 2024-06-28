@@ -59,7 +59,7 @@ function Navbar({ handleThemeChange, isDark }) {
         <div className="navbar-wrapper" ref={navbarRef}>
             <h1 className="navbar-title">
                 <Link smooth spy to="home" offset={0} onClick={handleHomePageScroll}>
-                    Moetez Ayari
+                    M.A
                 </Link>
             </h1>
             <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
