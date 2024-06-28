@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 import picture from '../../assets/Photo.png';
 import React from "react";
 import {useHomeAnimations} from "../../Utils/Animations";
-import resume from "../../Utils/resume.json";
+import resume from "../../assets/resume.json";
 
 function Home() {
     const { ref, contactTrail, trail, profilePicSpring }

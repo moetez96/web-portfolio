@@ -115,7 +115,8 @@
         ],
         "technologies": ["React", "IndexedDB (LocalBase)"],
         "demo": "https://music-player-app-blond.vercel.app/",
-        "source": "https://github.com/moetez96/music-player-app"
+        "source": "https://github.com/moetez96/music-player-app",
+        "imgPlaceholder": "musicapppic.png"
       },
       {
         "id": 2,
@@ -123,51 +124,15 @@
         "description": "University Enrollement is a monolithic web application that allows students to register, login and enroll in available courses.",
         "features": [
           "User Registration and Login: Students can create accounts with their personal information and login.",
-          "Course Catalog: A list of available courses with details",
-          "Course Enrollment: Students can select courses they wish to enroll in, subject to availability and prerequisites.",
+          "Course Catalog & Programs: A list of available courses and programs",
+          "Course Enrollment: Students can select courses they wish to enroll in.",
+          "Student Scores: Students can view all Students Learner Profiles, Sorted by GPA.",
           "User Profile Management: Ability for students to update personal information, view enrolled courses, and manage their courses."
         ],
         "technologies": ["Spring Boot", "Thymleaf"],
         "demo": "",
-        "source": "https://github.com/moetez96/university-enrollement"
-      },
-      {
-        "id": 3,
-        "title": "Promotional landing page for our favorite show",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "features": [
-          "File Selection & Scanning: Users can select individual audio files from their device or scan entire folders (including subfolders) for audio files.",
-          "Metadata Collection: Automatically collects and displays metadata for each audio file.",
-          "Favorites: Users can mark tracks as favorites for easy access.",
-          "Playback Modes: Includes repeat, play all, and shuffle modes.",
-          "Search: Users can search for audio files within their library.",
-          "Volume Control: Users can adjust the playback volume.",
-          "Music Slider: Users can control the playback progress with a slider.",
-          "Track Navigation: Allows jumping to the next or previous track if available.",
-          "Responsive Design: Optimized for both desktop and mobile devices."
-        ],
-        "technologies": ["React", "IndexedDB (LocalBase)"],
-        "demo": "https://music-player-app-blond.vercel.app/",
-        "source": "https://github.com/moetez96/music-player-app"
-      },
-      {
-        "id": 4,
-        "title": "Promotional landing page for our favorite show",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "features": [
-          "File Selection & Scanning: Users can select individual audio files from their device or scan entire folders (including subfolders) for audio files.",
-          "Metadata Collection: Automatically collects and displays metadata for each audio file.",
-          "Favorites: Users can mark tracks as favorites for easy access.",
-          "Playback Modes: Includes repeat, play all, and shuffle modes.",
-          "Search: Users can search for audio files within their library.",
-          "Volume Control: Users can adjust the playback volume.",
-          "Music Slider: Users can control the playback progress with a slider.",
-          "Track Navigation: Allows jumping to the next or previous track if available.",
-          "Responsive Design: Optimized for both desktop and mobile devices."
-        ],
-        "technologies": ["React", "IndexedDB (LocalBase)"],
-        "demo": "https://music-player-app-blond.vercel.app/",
-        "source": "https://github.com/moetez96/music-player-app"
+        "source": "https://github.com/moetez96/university-enrollement",
+        "imgPlaceholder": "universityapppic.png"
       }
     ]
   }

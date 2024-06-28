@@ -3,7 +3,7 @@ import { animated } from "react-spring";
 import React from "react";
 import ProjectCard from "../cards/ProjectCard";
 import {useProjectsAnimations} from "../../Utils/Animations";
-import resume from "../../Utils/resume.json";
+import resume from "../../assets/resume.json";
 
 function Projects() {
     const { ref, headerAnimationProps, listProjectAnimationProps } = useProjectsAnimations(resume.projects.list.length);

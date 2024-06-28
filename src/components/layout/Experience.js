@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 import React from "react";
 import ExperienceCard from "../cards/ExperienceCard";
 import {useExperienceAnimations} from "../../Utils/Animations";
-import resume from "../../Utils/resume.json";
+import resume from "../../assets/resume.json";
 
 function Experience() {
     const { ref, animationProps, headerAnimationProps } = useExperienceAnimations();

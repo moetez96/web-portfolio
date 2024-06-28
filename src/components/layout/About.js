@@ -2,7 +2,7 @@ import "../../styles/about.css";
 import { animated } from "react-spring";
 import React from "react";
 import { useAboutAnimations } from "../../Utils/Animations";
-import resume from "../../Utils/resume.json";
+import resume from "../../assets/resume.json";
 
 function About() {
     const { ref, headerSpring, descSpring, skillsTrail }

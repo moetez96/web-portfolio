@@ -2,10 +2,17 @@ import "../../styles/cards/project-card.css";
 import { ArrowOutwardOutlined, GitHub } from "@mui/icons-material";
 import { animated } from "react-spring";
 import React from "react";
-import {useProjectCardAnimation} from "../../Utils/Animations";
+import { useProjectCardAnimation } from "../../Utils/Animations";
 
-function ProjectCard({project}) {
+function ProjectCard({ project }) {
     const { ref, animationProps } = useProjectCardAnimation();
+
+    let projectImage;
+    try {
+        projectImage = require(`../../assets/${project.imgPlaceholder}`);
+    } catch (err) {
+        projectImage = null;
+    }
 
     const handleButtonClick = (link) => {
         window.open(link, "_blank");
@@ -15,29 +22,31 @@ function ProjectCard({project}) {
         <animated.div ref={ref} style={animationProps} className="project-card-container">
             <div className="project-card-img-container">
                 <div className="project-card-tag-container">
-                    {project.technologies.map((tech) => (
-                        <div className="project-card-tag">
+                    {project.technologies.map((tech, index) => (
+                        <div key={index} className="project-card-tag">
                             {tech}
                         </div>
                     ))}
                 </div>
-                <div className="project-card-img"></div>
+                {projectImage ? (
+                    <img className="project-card-img" src={projectImage} alt={project.title} />
+                ) : (
+                    <div className="project-card-img"/>
+                )}
             </div>
             <div className="project-card-overview">
                 <h2>{project.title}</h2>
-                <p>
-                    {project.description}
-                </p>
+                <p>{project.description}</p>
                 <div className="project-card-info">
                     <h3>Features</h3>
                     <hr />
-                    {project.features.map((feature) => (
-                        <p>{feature}</p>
+                    {project.features.map((feature, index) => (
+                        <p key={index}>{feature}</p>
                     ))}
                     <hr />
                 </div>
                 <div className="project-card-btns">
-                    {(project.demo != null && project.demo !== "") && (
+                    {project.demo && project.demo !== "" && (
                         <button onClick={() => handleButtonClick(project.demo)}>
                             LIVE DEMO <ArrowOutwardOutlined />
                         </button>

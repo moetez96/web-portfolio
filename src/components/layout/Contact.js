@@ -4,8 +4,9 @@ import { GitHub, LinkedIn } from "@mui/icons-material";
 import { animated } from "react-spring";
 import React, { useState } from "react";
 import { useContactAnimations } from "../../Utils/Animations";
-import resume from "../../Utils/resume.json";
+import resume from "../../assets/resume.json";
 import emailjs from 'emailjs-com';
+import cv from "../../assets/Moetez_Ayari_CV.pdf";
 
 function Contact() {
     const { infoRef, infoAnimation, formRef, formAnimation } = useContactAnimations();
@@ -24,6 +25,22 @@ function Contact() {
             ...formData,
             [name]: value
         });
+    };
+
+    const handleDownloadCV = () => {
+        fetch(cv)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Moetez_Ayari_CV.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            })
+            .catch(error => console.error('Error downloading CV:', error));
     };
 
     const validateForm = () => {
@@ -81,7 +98,7 @@ function Contact() {
                     <h1>Let’s connect</h1>
                     <span className="contact-desc">
                         <p>Say hello at <a href={`mailto:${resume.socials.email}`}>{resume.socials.email}</a></p>
-                        <p>For more info, here’s my <span>resume</span></p>
+                        <p>For more info, here’s my <span onClick={handleDownloadCV}>resume</span></p>
                     </span>
                     <div className="contact-apps">
                         <a href={resume.socials.linkedin} target="_blank" rel="noopener noreferrer">

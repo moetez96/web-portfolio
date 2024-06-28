@@ -74,6 +74,12 @@
     margin-top: 10px;
 }
 
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
 @media (max-width: 768px) {
     .contact-info {
         gap: 18px;

@@ -21,10 +21,13 @@
 }
 
 .project-card-img {
-    width: 75%;
+    min-width: 75%;
+    width: 100%;
+    min-height: max-content;
     height: 69%;
-    background-color: var(--text-color);
+    background-color: var(--nav-text-color);
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .project-card-tag-container {
@@ -182,6 +185,11 @@
             font-size: 12px;
         }
     }
+
+    .project-card-img {
+        width: 100%;
+        height: 60%;
+    }
 }
 
 @media (max-width: 425px) {
@@ -196,5 +204,8 @@
     .project-card-tag {
         height: 24px;
         font-size: 8px;
+    }
+    .project-card-img {
+        object-fit: fill;
     }
 }
