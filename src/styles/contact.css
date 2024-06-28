@@ -68,6 +68,12 @@
     }
 }
 
+.success-message {
+    color: #309630;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .contact-info {
         gap: 18px;
@@ -86,6 +92,10 @@
         grid-template-rows: max-content;
         gap: 30px;
         padding: 0 7% 60px;
+    }
+
+    .success-message {
+        font-size: 12px;
     }
 }
 
