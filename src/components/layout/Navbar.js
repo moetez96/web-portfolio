@@ -87,7 +87,7 @@ function Navbar({ handleThemeChange, isDark }) {
                         </Link>
                     </li>
                     <li>
-                        <Link smooth spy to="contact" offset={isMobile ? -118: 0} onClick={handleMenuOpen}>
+                        <Link smooth spy to="contact" offset={isMobile ? -118: -148} onClick={handleMenuOpen}>
                             Contact
                         </Link>
                     </li>

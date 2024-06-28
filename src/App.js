@@ -6,6 +6,7 @@ import Projects from "./components/layout/Projects";
 import Contact from "./components/layout/Contact";
 import About from "./components/layout/About";
 import Experience from "./components/layout/Experience";
+import Footer from "./components/layout/Footer";
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
@@ -33,6 +34,7 @@ function App() {
             <Projects />
             <hr />
             <Contact />
+            <Footer  />
         </div>
     );
 }
