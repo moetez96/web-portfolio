@@ -44,7 +44,7 @@
 .contact-apps {
     display: flex;
     gap: 15px;
-    color: #B2D630;
+    color: #7a9812;
 
     >a {
         display: flex;
@@ -69,7 +69,7 @@
 }
 
 .success-message {
-    color: #309630;
+    color: #7a9812;
     font-size: 14px;
     margin-top: 10px;
 }

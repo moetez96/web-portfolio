@@ -109,12 +109,12 @@
     >button  {
        border: 0;
         background-color: transparent;
-        color: #B2D630;
+        color: #7a9812;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 6px;
-        border-bottom: 2px solid #B2D630;
+        border-bottom: 2px solid #7a9812;
         padding: 3px 0;
         cursor: pointer;
         font-size: 14px;
