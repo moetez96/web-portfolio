@@ -1,9 +1,8 @@
 {
   "home": {
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "introduction": "Full-Stack Developer | Passionate About Software Development."
   },
   "about": {
-    "title": "Full-Stack Developer | Passionate About Software Development",
     "description": "I am a Full-Stack Developer from Tunisia, with a solid background in computer science and engineering from ESPRIT. My journey into software development began with a deep interest in coding languages such as JavaScript, Java, and Python, which I have honed alongside frameworks like ReactJS, Angular, and SpringBoot. I thrive on creating intuitive user experiences and delving into the latest frontend and backend technologies. Always eager to learn and grow, I continuously seek new skills and explore various aspects of design and development."
   },
   "skills": [
@@ -35,14 +34,14 @@
         {
           "projectName": "BMW Damage Management Application",
           "role": "Full Stack Developer",
-          "technologies": "Angular, SpringBoot, Java 11, PostgreSQL, Docker, Jenkins, AWS S3",
+          "technologies": "Angular, Spring Boot, Java 11, Node JS, PostgreSQL, Docker, Jenkins, AWS S3, Bitbucket",
           "description": "I participated in developing a BMW application focused on damage management during car transportation, contributing to the migration from monolithic to microservices architecture while gaining insights into best practices. I also played a role in enhancing the user interface to improve system functionality and user experience, gaining valuable experience in both backend and frontend development within a collaborative team setting."
         },
         {
           "projectName": "Tunisie Telecom BSCS",
           "role": "Software Developer",
-          "technologies": "J2EE, SpringBoot, Java 11, PostgreSQL, Docker, Jenkins",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "technologies": "Angular, Spring Boot, Java 11, J2EE, PostgreSQL, OracleDB,Docker, Jenkins, Gitlab",
+          "description": "I developed and maintained various components of the Billing System for a telecom operator, Tunisie Telecom. My responsibilities included implementing CI/CD pipelines using Jenkins to streamline deployment processes. Additionally, I collaborated in the design and development of new microservices, enhancing the system's scalability and performance."
         }
       ]
     },

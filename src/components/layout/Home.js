@@ -27,9 +27,9 @@ function Home() {
                         }
                         if (index === 2) {
                             return (
-                                <animated.p style={style} key={index}>
+                                <animated.h2 style={style} key={index}>
                                     {resume.home.introduction}
-                                </animated.p>
+                                </animated.h2>
                             );
                         }
                         return null;

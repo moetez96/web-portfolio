@@ -20,6 +20,11 @@
 
 .profile-desc {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    > h2 {
+        margin: 25px 0;
+    }
 }
 
 .profile-contact-btns {
@@ -124,6 +129,10 @@
 
     .profile-desc {
         width: 48%;
+        > h2 {
+            margin: 20px 0;
+            font-size: 22px;
+        }
     }
 
     .profile-contact-btns {
@@ -169,6 +178,10 @@
 
     .profile-desc {
         width: 100%;
+        > h2 {
+            margin: 15px 0;
+            font-size: 20px;
+        }
     }
 
     .profile-pic-container {
@@ -185,6 +198,14 @@
 
     .home-container {
         gap: 20px;
+    }
+
+    .profile-desc {
+        width: 100%;
+        > h2 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
     }
 
     .profile-contact-btns {

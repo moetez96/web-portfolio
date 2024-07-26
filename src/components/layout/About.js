@@ -13,7 +13,6 @@ function About() {
             <div className="about-container">
                 <animated.h1 style={headerSpring}>About Me</animated.h1>
                 <animated.div style={descSpring} className="about-desc">
-                    <h2>{resume.about.title}</h2>
                     <p>{resume.about.description}</p>
                 </animated.div>
             </div>
