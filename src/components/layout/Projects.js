@@ -12,7 +12,7 @@ function Projects() {
         <div className="projects-wrapper" id="projects">
             <div className="projects-container" ref={ref}>
                 <animated.div style={headerAnimationProps} className="projects-header">
-                    <h1>Featured Projects</h1>
+                    <h1>Projects</h1>
                     <p>{resume.projects.description}</p>
                 </animated.div>
                 <div className="projects-list-container">
