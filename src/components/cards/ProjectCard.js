@@ -48,12 +48,24 @@ function ProjectCard({ project }) {
                 <div className="project-card-btns">
                     {project.demo && project.demo !== "" && (
                         <button onClick={() => handleButtonClick(project.demo)}>
-                            LIVE DEMO <ArrowOutwardOutlined />
+                            DEMO <ArrowOutwardOutlined />
                         </button>
                     )}
-                    <button onClick={() => handleButtonClick(project.source)}>
-                        SEE ON GITHUB <GitHub />
-                    </button>
+                    {project.source && project.source !== "" ? (
+                        <button onClick={() => handleButtonClick(project.source)}>
+                            SEE ON GITHUB <GitHub />
+                        </button>
+                    ) : (
+                        <>
+                            <button onClick={() => handleButtonClick(project.sourceFrontend)}>
+                                Frontend <GitHub />
+                            </button>
+                            <button onClick={() => handleButtonClick(project.sourceBacked)}>
+                                Backend <GitHub />
+                            </button>
+                        </>
+                    )}
+
                 </div>
             </div>
         </animated.div>
