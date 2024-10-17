@@ -1,12 +1,9 @@
 import './App.css';
 import Navbar from "./components/layout/Navbar";
 import { useState, useEffect } from "react";
-import Home from "./components/layout/Home";
-import Projects from "./components/layout/Projects";
-import Contact from "./components/layout/Contact";
-import About from "./components/layout/About";
-import Experience from "./components/layout/Experience";
-import Footer from "./components/layout/Footer";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
@@ -24,17 +21,15 @@ function App() {
 
     return (
         <div className="App" data-theme={isDark ? "dark" : "light"}>
-            <Navbar handleThemeChange={handleThemeChange} isDark={isDark}/>
-            <Home />
-            <hr />
-            <About />
-            <hr />
-            <Experience />
-            <hr />
-            <Projects />
-            <hr />
-            <Contact />
-            <Footer  />
+            <Navbar handleThemeChange={handleThemeChange} isDark={isDark} />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/project/:id" element={<Project />} />
+
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }

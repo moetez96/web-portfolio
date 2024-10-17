@@ -1,22 +1,22 @@
-import "../../styles/home.css";
+import "../../styles/intro.css";
 import { ArrowOutward, GitHub, LinkedIn } from "@mui/icons-material";
 import { animated } from "react-spring";
 import picture from '../../assets/Photo.png';
 import React from "react";
-import {useHomeAnimations} from "../../Utils/Animations";
+import {useIntroAnimations} from "../../Utils/Animations";
 import resume from "../../assets/resume.json";
 
-function Home() {
+function Intro() {
     const { ref, contactTrail, trail, profilePicSpring }
-        = useHomeAnimations();
+        = useIntroAnimations();
 
     const handleContactButtonClick = () => {
         window.location.href = `mailto:${resume.socials.email}`;
     };
 
     return (
-        <div className="home-wrapper" id="home">
-            <div className="home-container" ref={ref}>
+        <div className="intro-wrapper" id="intro">
+            <div className="intro-container" ref={ref}>
                 <div className="profile-desc">
                     {trail.map((style, index) => {
                         if (index === 0) {
@@ -28,7 +28,7 @@ function Home() {
                         if (index === 2) {
                             return (
                                 <animated.h2 style={style} key={index}>
-                                    {resume.home.introduction}
+                                    {resume.intro.description}
                                 </animated.h2>
                             );
                         }
@@ -64,4 +64,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Intro;

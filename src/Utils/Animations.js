@@ -45,7 +45,7 @@ export const useAboutAnimations = (skillsLength) => {
 };
 
 
-export const useHomeAnimations = (skillsLength) => {
+export const useIntroAnimations = (skillsLength) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,

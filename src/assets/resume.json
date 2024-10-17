@@ -1,6 +1,6 @@
 {
-  "home": {
-    "introduction": "Full-Stack Developer | Passionate About Software Development."
+  "intro": {
+    "description": "Full-Stack Developer | Passionate About Software Development."
   },
   "about": {
     "description": "I am a Full-Stack Developer from Tunisia, with a solid background in computer science and engineering from ESPRIT. My journey into software development began with a deep interest in coding languages such as JavaScript, Java, and Python, which I have honed alongside frameworks like ReactJS, Angular, and SpringBoot. I thrive on creating intuitive user experiences and delving into the latest frontend and backend technologies. Always eager to learn and grow, I continuously seek new skills and explore various aspects of design and development."
