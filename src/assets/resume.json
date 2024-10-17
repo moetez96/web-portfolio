@@ -39,7 +39,7 @@
         },
         {
           "projectName": "Tunisie Telecom BSCS",
-          "role": "Software Developer",
+          "role": "Full Stack Developer",
           "technologies": "Angular, Spring Boot, Java 11, J2EE, PostgreSQL, OracleDB,Docker, Jenkins, Gitlab",
           "description": "I developed and maintained various components of the Billing System for a telecom operator, Tunisie Telecom. My responsibilities included implementing CI/CD pipelines using Jenkins to streamline deployment processes. Additionally, I collaborated in the design and development of new microservices, enhancing the system's scalability and performance."
         }

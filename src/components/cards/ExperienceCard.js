@@ -27,14 +27,16 @@ function ExperienceCard({ exp, index }) {
             style={animationProps}
         >
             <div className="timeline-item-content" style={{ opacity: animationProps.opacity }}>
+
                 {exp.projects.length > 1 && (
                     <div className="pagination-indicators">
                         {exp.projects.map((elem, idx) => (
-                            <span
-                                key={idx}
-                                className={`pagination-circle ${idx === selectIndex ? 'active' : ''}`}
-                                onClick={() => handlePaginationClick(idx)}
-                            ></span>
+                            <span key={idx}
+                                  className={`pagination-number ${idx === selectIndex ? 'active' : ''}`}
+                                  onClick={() => handlePaginationClick(idx)}
+                            >
+                                {idx + 1}
+                            </span>
                         ))}
                     </div>
                 )}

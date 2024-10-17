@@ -21,7 +21,7 @@
     border-radius: 6px;
     padding: 20px 20px 80px;
     width: 100%;
-    height: max-content;
+    height: auto;
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
@@ -98,32 +98,44 @@
     }
 }
 
+.hide {
+    display: none;
+    visibility: hidden;
+    height: 0;
+}
+
+
+.pagination-number {
+    margin: 0 6px;
+    border-radius: 6px;
+    background-color: var(--secondary-background-color);
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 6px;
+}
+
+.pagination-number:hover {
+    background-color: var(--nav-text-color);
+    color: var(--primary-background-color);
+}
+
+.pagination-number.active {
+    background-color: var(--nav-text-color);
+    color: var(--primary-background-color);
+    cursor: default;
+}
+
 .pagination-indicators {
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-}
-
-.pagination-circle {
-    width: 15px;
-    height: 15px;
-    background-color: var(--nav-text-color);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.pagination-circle:hover {
-    background-color: var(--secondary-background-color);
-}
-
-
-
-.pagination-circle.active {
-    background-color: var(--secondary-background-color);
 }
 
 @media (max-width: 1024px) {
@@ -137,11 +149,21 @@
         font-size: 18px;
     }
 
-    .timeline-item-content p {
+    .timeline-item-content > p {
         font-size: 14px;
     }
 
     .timeline-item .tech > p {
+        font-size: 14px;
+    }
+
+    .pagination-indicators {
+        top: -36px
+    }
+
+    .pagination-number {
+        min-width: 28px;
+        height: 28px;
         font-size: 14px;
     }
 }
@@ -175,9 +197,13 @@
         left: -35px;
     }
 
-    .pagination-circle {
-        width: 12.5px;
-        height: 12.5px;
+    .pagination-indicators {
+        top: -32px
+    }
+
+    .pagination-number {
+        min-width: 24px;
+        height: 24px;
     }
 }
 
@@ -201,6 +227,10 @@
         font-size: 16px;
     }
 
+    .timeline-item-content > p {
+        padding-bottom: 12px;
+    }
+
     .timeline-item.right {
         left: 0;
     }
@@ -209,5 +239,16 @@
         top: -10px;
         left: -10px;
         z-index: 2;
+    }
+
+    .pagination-indicators {
+        top: -28px
+    }
+
+    .pagination-number {
+        min-width: 20px;
+        height: 20px;
+        padding: 0 6px;
+        font-size: 12px;
     }
 }
