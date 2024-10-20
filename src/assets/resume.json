@@ -99,6 +99,7 @@
     "list": [
       {
         "id": 1,
+        "name": "chat-app",
         "title": "Chat App",
         "description": "A messaging application built with Angular and SpringBoot, that allows users to register, log in, search for new friends, send and manage friendship requests, and chat in real-time with other users.",
         "features": [
@@ -117,6 +118,7 @@
       },
       {
         "id": 2,
+        "name": "music-player-app",
         "title": "Music Player App",
         "description": "A modern, responsive music player app built with React and Sass, utilizing IndexedDB (via LocalBase) for local storage. This app allows users to select and play audio files from their device.\n\nUsers can scan specific folders for audio files, collect metadata, and manage their music library with ease.",
         "features": [
@@ -137,6 +139,7 @@
       },
       {
         "id": 3,
+        "name": "university-enrollment",
         "title": "University Enrollement",
         "description": "University Enrollement is a monolithic web application that allows students to register, login and enroll in available courses.",
         "features": [

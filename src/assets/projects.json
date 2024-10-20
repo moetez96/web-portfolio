@@ -1,0 +1,237 @@
+{
+  "list": [
+    {
+      "name": "chat-app",
+      "title": "Chat App",
+      "shdes": "A messaging application, that allows users to chat in real-time with other users.",
+      "description": "CHAT APP is a real-time messaging application built with Angular and Spring Boot, using WebSocket for instant communication. It allows users to search for friends, send and manage friend requests, and exchange messages seamlessly.",
+      "image": "chatapp.png",
+      "imgDesc": "Chat App",
+      "sections": [
+        {
+          "type": "type3",
+          "title": "User Registration and Login",
+          "description": "The chat app uses a JWT-based authentication system to secure user access. Upon login, users provide their username (rather than email) and password. The app authenticates the credentials via the back-end, generating a JWT token upon successful login. This token is then stored and used for all subsequent requests to protected API endpoints, ensuring secure communication between the client and server.",
+          "images": [
+            {
+              "image": "loginchatapp.png",
+              "imgDesc": "Login Page"
+            },
+            {
+              "image": "registerchatapp.png",
+              "imgDesc": "Register Page"
+            }
+          ]
+        },
+        {
+          "type": "type2",
+          "title": "Real-Time Messaging",
+          "description": "The core feature of the app is its real-time messaging functionality, powered by WebSocket.",
+          "points": [
+            "Instant Messaging: Users can select a friend and chat in real time.",
+            "Delivery & Read Status: Messages are tracked with notifications for delivery and read receipts.",
+            "Unseen Messages: Missed messages are stored and marked as unseen.",
+            "Conversation History: A timeline organizes messages by day for easy navigation."
+          ],
+          "image": "chatappmassenger.gif",
+          "imgDesc": "Instant Messaging"
+        },
+        {
+          "type": "type2",
+          "title": "Notification System",
+          "description": "The app features a robust real-time notification system that keeps users updated on key events as they happen.",
+          "points": [
+            "Friend Requests: Instant alerts for incoming friend requests and when they are accepted.",
+            "Message Notifications: Users receive notifications for incoming messages, even if they are not actively in the conversation.",
+            "Friend Status Updates: Dynamic status update helps users stay connected and know when friends are available for chat."
+          ],
+          "images": [
+            {
+              "image": "requestnotification.gif",
+              "imgDesc": "Friend Requests"
+            },
+            {
+              "image": "messagenotificationchatapp.gif",
+              "imgDesc": "Message Notifications"
+            }
+          ]
+        },
+        {
+          "type": "type3",
+          "title": "Friend Management",
+          "description": "The app allows users to search for friends, send and receive friend requests, and track friend statuses in real-time.",
+          "points": [
+            "Friend Search: Users can search for friends by username, making it easy to find and connect with others.",
+            "Friend Requests: Users can send, accept, decline, or cancel friend requests. Requests are processed in real-time using WebSocket, ensuring that both parties receive instant notifications when a request is sent or responded to.",
+            "Friend Status Tracking: The app updates and displays friends’ online/offline statuses in real-time, also using WebSocket. Whenever a friend logs in or out, their status changes instantly, enhancing the dynamic user experience."
+          ],
+          "images": [
+            {
+              "image": "friendssearchchatapp.png",
+              "imgDesc": "Friend Search"
+            },
+            {
+              "image": "requetschatapp.png",
+              "imgDesc": "Friend Requests"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "music-player-app",
+      "title": "Music Player App",
+      "shdes": "A music player, that allows users to play music stored in their devices directly in the browser.",
+      "description": "This music player app, built using React and Sass and offers a responsive and user-friendly interface for managing and playing audio files directly from the user's device. Ensuring that users can maintain their music library without needing external servers or cloud storage.",
+      "image": "musicapppic.png",
+      "imgDesc": "Music Player App",
+      "sections": [
+        {
+          "type": "type2",
+          "title": "File Selection and Scanning",
+          "description": "This feature gives users flexibility in building their library, whether they want to pick specific tracks or load large collections at once.",
+          "points": [
+            "Select individual audio files manually from their device.",
+            "Scan entire folders and subfolders for audio files, adding them to their music library automatically."
+          ],
+          "images": [
+            {
+              "image": "fileseleectionplayerapp.gif",
+              "imgDesc": "Select individual audio files"
+            },
+            {
+              "image": "folderscanplayerapp.gif",
+              "imgDesc": "Scan folder for audio files"
+            }
+          ]
+        },
+        {
+          "type": "type3",
+          "title": "Player Component",
+          "description": "The Player Component is the central part of the music player app, responsible for controlling and displaying all aspects of audio playback. It provides an intuitive interface for users to interact with the current track and adjust playback settings.",
+          "points": [
+            "The app offers multiple playback modes to enhance the listening experience: Repeat, Play All and Shuffle",
+            "The app includes a volume slider to adjust playback volume.",
+            "Track Navigation with next and previous buttons.",
+            "The music slider allows users to control the playback progress, enabling them to skip to any part of the currently playing track and visually track how much of the song has played."
+          ],
+          "images": [
+            {
+              "image": "componentplayerapp.png",
+              "imgDesc": "Player Component"
+            }
+          ]
+        },
+        {
+          "type": "type2",
+          "title": "Metadata Collection",
+          "description": "For each audio file added, the app automatically extracts and displays essential metadata, including: Song title, Artist, Album, Duration, Cover Art etc...",
+          "image": "metadataplayerapp.png",
+          "imgDesc": "Metadata"
+        },
+        {
+          "type": "type3",
+          "title": "Manage Music Track",
+          "description": "The app allows users to search for tracks, add tracks to favorite list and delete tracks from collection.",
+          "points": [
+            "Users can mark specific tracks as favorites.",
+            "Users Delete specific tracks as favorites.",
+            "A built-in search functionality enables users to quickly find tracks"
+          ],
+          "images": [
+            {
+              "image": "favoritelistplayerapp.png",
+              "imgDesc": "Favorite Music Tracks Page"
+            },
+            {
+              "image": "searchtracksplayerapp.png",
+              "imgDesc": "Search Music Tracks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "university-enrollment",
+      "title": "University Enrollment",
+      "shdes": "A web application that allows students to register, login, and enroll in courses.",
+      "description": "University Enrollment is a web-based application built with Spring and Thymeleaf, designed for students to register, log in, and enroll in available courses. It provides a comprehensive course catalog, facilitates course enrollment, allows users to view and manage their academic profiles, and enables students to update personal information and track their GPA.",
+      "image": "universityapppic.png",
+      "imgDesc": "University Enrollment",
+      "sections": [
+        {
+          "type": "type3",
+          "title": "User Registration and Login",
+          "description": "Students can create accounts by providing their personal information, including name, contact details, and academic background. After registering, they can log in using their credentials to access the system.",
+          "images": [
+            {
+              "image": "loginuniversityapp.png",
+              "imgDesc": "Login Page"
+            },
+            {
+              "image": "registeruniversityapp.png",
+              "imgDesc": "Register Page"
+            }
+          ]
+        },
+        {
+          "type": "type2",
+          "title": "Student Scores",
+          "description": "The app provides access to learner profiles for all students, sorted by GPA.",
+          "images": [
+            {
+              "image": "studentlistuniversityapp.png",
+              "imgDesc": "Student List Page"
+            },
+            {
+              "image": "scoreuniversityapp.png",
+              "imgDesc": "Student Score Sorted by GPA"
+            }
+          ]
+        },
+        {
+          "type": "type2",
+          "title": "Course Catalog & Programs",
+          "description": "The app offers a comprehensive course catalog that displays all available courses and programs offered by the university.",
+          "points": [
+            "Browse courses by category or program.",
+            "View detailed descriptions, including prerequisites, credits, and schedules."
+          ],
+          "images": [
+            {
+              "image": "allprogramsuniversityapp.png",
+              "imgDesc": "All Programs Page"
+            },
+            {
+              "image": "allcoursesuniversityapp.png",
+              "imgDesc": "All Courses Page"
+            }
+          ]
+        },
+        {
+          "type": "type2",
+          "title": "User Profile Management",
+          "description": "Students can manage their user profiles.",
+          "points": [
+            "Updating personal information.",
+            "Viewing and managing enrolled courses."
+          ],
+          "images": [
+            {
+              "image": "studentprofileuniversityapp.png",
+              "imgDesc": "View Profile Page"
+            },
+            {
+              "image": "updateinfouniversityapp.png",
+              "imgDesc": "Update Profile Page"
+            },
+            {
+              "image": "enrollementcoursesuniversityapp.png",
+              "imgDesc": "Viewing and managing enrolled courses."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
