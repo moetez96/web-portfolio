@@ -1,13 +1,16 @@
 import '../../styles/navbar.css';
 import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-material";
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { useNavigate, useLocation } from 'react-router-dom';
 import cv from '../../assets/Moetez_Ayari_CV.pdf';
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const navbarRef = useRef(null);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleMenuOpen = () => {
         setNavMenuOpen(!navMenuOpen);
@@ -35,8 +38,12 @@ function Navbar({ handleThemeChange, isDark }) {
     const handleThemeClick = () => {
         handleThemeChange();
     };
-    const handleHomePageScroll = () => {
+
+    const handleHomePageScroll = (targetSection) => {
         setNavMenuOpen(false);
+        if (location.pathname !== "/") {
+            navigate("/", { state: { scrollTo: targetSection } });
+        }
     };
 
     const handleDownloadCV = () => {
@@ -58,9 +65,9 @@ function Navbar({ handleThemeChange, isDark }) {
     return (
         <div className="navbar-wrapper" ref={navbarRef}>
             <h1 className="navbar-title">
-                <Link smooth spy to="home" offset={0} onClick={handleHomePageScroll}>
+                <ScrollLink to="intro" smooth spy offset={0} onClick={() => handleHomePageScroll('intro')}>
                     M.A
-                </Link>
+                </ScrollLink>
             </h1>
             <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
                 {navMenuOpen ? (
@@ -72,24 +79,48 @@ function Navbar({ handleThemeChange, isDark }) {
             <div className={`navbar-menu-container ${isMobile ? `${navMenuOpen ? 'open' : 'closed'}` : ''}`}>
                 <ul className="navbar-menu">
                     <li>
-                        <Link smooth spy to="about" offset={isMobile ? -118: -148} onClick={handleMenuOpen}>
+                        <ScrollLink
+                            to="about"
+                            smooth
+                            spy
+                            offset={isMobile ? -118 : -148}
+                            onClick={() => handleHomePageScroll('about')}
+                        >
                             About
-                        </Link>
+                        </ScrollLink>
                     </li>
                     <li>
-                        <Link smooth spy to="experience" offset={isMobile ? -128 : -158} onClick={handleMenuOpen}>
+                        <ScrollLink
+                            to="experience"
+                            smooth
+                            spy
+                            offset={isMobile ? -128 : -158}
+                            onClick={() => handleHomePageScroll('experience')}
+                        >
                             Experience
-                        </Link>
+                        </ScrollLink>
                     </li>
                     <li>
-                        <Link smooth spy to="projects" offset={isMobile ? -118: -148} onClick={handleMenuOpen}>
+                        <ScrollLink
+                            to="projects"
+                            smooth
+                            spy
+                            offset={isMobile ? -118 : -148}
+                            onClick={() => handleHomePageScroll('projects')}
+                        >
                             Projects
-                        </Link>
+                        </ScrollLink>
                     </li>
                     <li>
-                        <Link smooth spy to="contact" offset={isMobile ? -118: -148} onClick={handleMenuOpen}>
+                        <ScrollLink
+                            to="contact"
+                            smooth
+                            spy
+                            offset={isMobile ? -118 : -148}
+                            onClick={() => handleHomePageScroll('contact')}
+                        >
                             Contact
-                        </Link>
+                        </ScrollLink>
                     </li>
                 </ul>
 
@@ -97,12 +128,11 @@ function Navbar({ handleThemeChange, isDark }) {
 
                 <div className="navbar-options">
                     <div className="navbar-light-dark-mode" onClick={handleThemeClick}>
-                        {isDark ?
-                            (<LightModeOutlined fontSize={'large'} />)
-                            :
-                            (<DarkModeOutlined fontSize={'large'} />)
-
-                        }
+                        {isDark ? (
+                            <LightModeOutlined fontSize={'large'} />
+                        ) : (
+                            <DarkModeOutlined fontSize={'large'} />
+                        )}
                     </div>
 
                     <button className="navbar-download-button" onClick={handleDownloadCV}>
