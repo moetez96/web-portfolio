@@ -3,24 +3,23 @@ import { ArrowOutwardOutlined, GitHub } from "@mui/icons-material";
 import { animated } from "react-spring";
 import React from "react";
 import { useProjectCardAnimation } from "../../Utils/Animations";
+import {useNavigate} from "react-router-dom";
 
 function ProjectCard({ project }) {
     const { ref, animationProps } = useProjectCardAnimation();
-
-    let projectImage;
-    try {
-        projectImage = require(`../../assets/${project.imgPlaceholder}`);
-    } catch (err) {
-        projectImage = null;
-    }
+    const navigate = useNavigate();
 
     const handleButtonClick = (link) => {
         window.open(link, "_blank");
     };
 
+    const handleImageClick = () => {
+        navigate(`/project/${project.name}`);
+    };
+
     return (
         <animated.div ref={ref} style={animationProps} className="project-card-container">
-            <div className="project-card-img-container">
+            <div className="project-card-img-container" onClick={handleImageClick}>
                 <div className="project-card-tag-container">
                     {project.technologies.map((tech, index) => (
                         <div key={index} className="project-card-tag">
@@ -28,8 +27,8 @@ function ProjectCard({ project }) {
                         </div>
                     ))}
                 </div>
-                {projectImage ? (
-                    <img className="project-card-img" src={projectImage} alt={project.title} />
+                {project.imgPlaceholder ? (
+                    <img className="project-card-img" src={`/projects/${project.imgPlaceholder}`} alt={project.title} />
                 ) : (
                     <div className="project-card-img"/>
                 )}
