@@ -2,10 +2,13 @@ import About from "../components/layout/About";
 import Experience from "../components/layout/Experience";
 import Projects from "../components/layout/Projects";
 import Contact from "../components/layout/Contact";
-import Footer from "../components/layout/Footer";
 import Intro from "../components/layout/Intro";
+import {useEffect} from "react";
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
@@ -18,7 +21,6 @@ function Home() {
             <Projects/>
             <hr/>
             <Contact/>
-            <Footer/>
         </>
     );
 }

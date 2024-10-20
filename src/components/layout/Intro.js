@@ -1,7 +1,6 @@
 import "../../styles/intro.css";
 import { ArrowOutward, GitHub, LinkedIn } from "@mui/icons-material";
 import { animated } from "react-spring";
-import picture from '../../assets/Photo.png';
 import React from "react";
 import {useIntroAnimations} from "../../Utils/Animations";
 import resume from "../../assets/resume.json";
@@ -56,7 +55,7 @@ function Intro() {
                     </span>
                 </div>
 
-                <animated.img style={profilePicSpring} className="profile-pic-container" src={picture}>
+                <animated.img style={profilePicSpring} className="profile-pic-container" src="/Photo.png">
 
                 </animated.img>
             </div>

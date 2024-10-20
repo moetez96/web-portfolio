@@ -6,3 +6,22 @@
     height: 96px;
     color: var(--nav-text-color);
 }
+
+@media (max-width: 1024px) {
+    .footer-wrapper {
+        height: 86px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        height: 66px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .footer-wrapper {
+        height: 56px;
+    }
+}
