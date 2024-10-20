@@ -44,7 +44,6 @@ function Project() {
 
     return (
         <>
-            {/* Apply animation to the title-wrapper */}
             <animated.div style={titleAnimation} className="title-wrapper">
                 <div className="title-container">
                     <h1 className="project-title">{currentProject.title}</h1>
@@ -74,7 +73,6 @@ function Project() {
             </animated.div>
 
             <div className="project-sections-wrapper">
-                {/* Apply animation to ProjectSectionType1 */}
                 <animated.div style={section1Animation}>
                     <ProjectSectionType1
                         description={currentProject.description}

@@ -24,11 +24,17 @@ function ScrollToSection({ setContentLoaded }) {
 
     useEffect(() => {
         if (location.state?.scrollTo) {
+            const offset =
+                location.state.scrollTo === 'experience'
+                    ? (isMobile ? -128 : -158)
+                    : (isMobile ? -118 : -148);
+
             scroller.scrollTo(location.state.scrollTo, {
                 smooth: true,
-                offset: isMobile ? -80 : -108,
+                offset: offset,
                 duration: 500,
             });
+
 
             setTimeout(() => {
                 navigate(location.pathname, { replace: true, state: {} });
