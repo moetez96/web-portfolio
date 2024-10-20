@@ -57,10 +57,10 @@ function ProjectCard({ project }) {
                     ) : (
                         <>
                             <button onClick={() => handleButtonClick(project.sourceFrontend)}>
-                                Frontend <GitHub />
+                                FRONT-END <GitHub />
                             </button>
                             <button onClick={() => handleButtonClick(project.sourceBacked)}>
-                                Backend <GitHub />
+                                BACK-END <GitHub />
                             </button>
                         </>
                     )}

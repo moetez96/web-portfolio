@@ -83,7 +83,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="about"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -80 : -108}
                             onClick={() => handleHomePageScroll('about')}
                         >
                             About
@@ -94,7 +94,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="experience"
                             smooth
                             spy
-                            offset={isMobile ? -128 : -158}
+                            offset={isMobile ? -90 : -118}
                             onClick={() => handleHomePageScroll('experience')}
                         >
                             Experience
@@ -105,7 +105,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="projects"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -80 : -108}
                             onClick={() => handleHomePageScroll('projects')}
                         >
                             Projects
@@ -116,7 +116,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="contact"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -80 : -108}
                             onClick={() => handleHomePageScroll('contact')}
                         >
                             Contact

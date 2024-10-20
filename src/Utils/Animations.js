@@ -134,6 +134,47 @@ export const useProjectsAnimations = (projectsLength) => {
     return { ref, headerAnimationProps, listProjectAnimationProps };
 };
 
+export const useProjectSectionAnimation = () => {
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.4 });
+
+    const containerAnimationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+        config: { duration: 500 },
+    });
+
+    const descriptionAnimationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(-20px)',
+        config: { duration: 500 },
+    });
+
+    const imagesAnimationProps = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+        config: { duration: 500, delay: 500 },
+    });
+
+    return { ref, containerAnimationProps, descriptionAnimationProps, imagesAnimationProps };
+};
+
+export const useTitleAnimation = () => {
+    return useSpring({
+        from: { opacity: 0, transform: 'translateY(-50px)' },
+        to: { opacity: 1, transform: 'translateY(0)' },
+        config: { duration: 600 },
+    });
+};
+
+export const useSection1Animation = () => {
+    return useSpring({
+        from: { opacity: 0, transform: 'translateY(50px)' },
+        to: { opacity: 1, transform: 'translateY(0)' },
+        delay: 700, // Delay to allow the title-wrapper to finish its animation
+        config: { duration: 600 },
+    });
+};
+
 export const useExperienceCardAnimations = (index, projectsLength) => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [selectIndex, setSelectIndex] = useState(0);

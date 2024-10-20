@@ -1,34 +1,34 @@
 import React from "react";
+import {useProjectSectionAnimation} from "../../Utils/Animations";
+import { animated } from "react-spring";
 
-function ProjectSectionType3({sectionInfo}) {
+function ProjectSectionType3({ sectionInfo }) {
+    const { ref, descriptionAnimationProps, imagesAnimationProps } = useProjectSectionAnimation();
 
     return (
-        <div className="section-type3">
-            <div className="section-description">
+        <div ref={ref} className="section-type3">
+            <animated.div style={descriptionAnimationProps} className="section-description">
                 <h2>{sectionInfo.title}</h2>
-                <p>
-                    {sectionInfo.description}
-                </p>
+                <p>{sectionInfo.description}</p>
                 {sectionInfo.points && (
                     <ul>
-                        {sectionInfo.points.map((point) => (
-                            <li>
-                                {point}
-                            </li>
+                        {sectionInfo.points.map((point, index) => (
+                            <li key={index}>{point}</li>
                         ))}
                     </ul>
                 )}
-            </div>
-            <div className="section-images">
-                {sectionInfo.images?.map((image) => (
-                    <div className="picture-wrapper">
-                        <img src={`/projects/${image.image}`} alt={image}/>
+            </animated.div>
+
+            <animated.div style={imagesAnimationProps} className="section-images">
+                {sectionInfo.images?.map((image, index) => (
+                    <div key={index} className="picture-wrapper">
+                        <img src={`/projects/${image.image}`} alt={image.imgDesc} />
                         <div className="picture-desc">
                             <p>{image.imgDesc}</p>
                         </div>
                     </div>
                 ))}
-            </div>
+            </animated.div>
         </div>
     );
 }
