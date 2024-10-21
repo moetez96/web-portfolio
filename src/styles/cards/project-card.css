@@ -22,7 +22,6 @@
 
 .project-card-img-container:hover {
     transform: translateY(-10px);
-    filter: brightness(1.2);
 }
 
 .project-card-img {
@@ -64,9 +63,10 @@
 }
 
 .project-card-overview {
-    padding: 0 32px;
+    padding: 4px 32px;
     height: 88%;
     overflow-y: scroll;
+    border-radius: 5px;
 }
 
 .project-card-overview > h2 {
@@ -132,6 +132,12 @@
 .project-card-btns > button:hover {
     transform: translateY(-4px);
     filter: brightness(1.2);
+}
+
+.project-open-button {
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
 
 @media (max-width: 1024px) {

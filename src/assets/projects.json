@@ -7,6 +7,7 @@
       "description": "CHAT APP is a real-time messaging application built with Angular and Spring Boot, using WebSocket for instant communication. It allows users to search for friends, send and manage friend requests, and exchange messages seamlessly.",
       "image": "chatapp.png",
       "imgDesc": "Chat App",
+      "tech": ["angularjs", "spring", "typescript", "css3", "postgres", "github", "docker", "vercel"],
       "sections": [
         {
           "type": "type3",
@@ -85,6 +86,7 @@
       "description": "This music player app, built using React and Sass and offers a responsive and user-friendly interface for managing and playing audio files directly from the user's device. Ensuring that users can maintain their music library without needing external servers or cloud storage.",
       "image": "musicapppic.png",
       "imgDesc": "Music Player App",
+      "tech": ["react", "javascript", "sass", "github", "vercel"],
       "sections": [
         {
           "type": "type2",
@@ -158,6 +160,7 @@
       "description": "University Enrollment is a web-based application built with Spring and Thymeleaf, designed for students to register, log in, and enroll in available courses. It provides a comprehensive course catalog, facilitates course enrollment, allows users to view and manage their academic profiles, and enables students to update personal information and track their GPA.",
       "image": "universityapppic.png",
       "imgDesc": "University Enrollment",
+      "tech": ["spring", "html5", "css3", "github"],
       "sections": [
         {
           "type": "type3",

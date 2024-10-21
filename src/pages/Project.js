@@ -81,7 +81,7 @@ function Project() {
                     />
                 </animated.div>
 
-                <ProjectNote />
+                <ProjectNote tech={currentProject.tech}/>
 
                 {currentProject.sections?.map((section, index) => (
                     <React.Fragment key={index}>

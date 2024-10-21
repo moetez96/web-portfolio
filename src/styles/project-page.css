@@ -140,8 +140,9 @@ ul, li {
 
 .project-note-wrapper {
     position: relative;
-    height: 158px;
-    width: 60%;
+    height: 100px;
+    width: 70%;
+    max-width: 70%;
     background-color: #B2D630;
     border-radius: 10px;
     margin: 20px 0;
@@ -149,8 +150,8 @@ ul, li {
 
 .project-note {
     position: absolute;
-    height: 158px;
-    width: auto;
+    height: 100px;
+    width: 100%;
     background-color: var(--primary-background-color);
     color: var(--text-color);
     border-radius: 12px;
@@ -158,7 +159,8 @@ ul, li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 15px;
+    gap: 20px;
+    padding: 0;
 }
 
 .project-card-btns {
@@ -173,6 +175,12 @@ ul, li {
     height: 1px;
     width: 90%;
     margin: 20px auto;
+}
+
+i {
+    background-color: transparent;
+    color: var(--nav-text-color);
+    font-size: 70px;
 }
 
 @media (max-width: 1024px) {
@@ -212,6 +220,19 @@ ul, li {
         margin: 0;
         justify-content: center;
         align-items: center;
+    }
+
+    .project-note-wrapper {
+        height: 75px;
+    }
+
+    .project-note {
+        height: 75px;
+        gap: 15px;
+    }
+
+    i {
+        font-size: 55px;
     }
 }
 
@@ -270,7 +291,28 @@ ul, li {
         justify-content: center;
         align-items: center;
     }
+
+    .project-note-wrapper {
+        height: 55px;
+    }
+
+    .project-note {
+        height: 55px;
+        gap: 10px;
+    }
+
+    i {
+        font-size: 35px;
+    }
 }
+
+@media (max-width: 550px) {
+
+    i {
+        font-size: 30px;
+    }
+}
+
 
 @media (max-width: 426px) {
 
@@ -301,5 +343,18 @@ ul, li {
     .picture-desc {
         min-height: 30px;
         padding: 0 6px;
+    }
+
+    .project-note-wrapper {
+        height: 45px;
+    }
+
+    .project-note {
+        height: 45px;
+        gap: 5px;
+    }
+
+    i {
+        font-size: 25px;
     }
 }

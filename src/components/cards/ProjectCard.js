@@ -4,6 +4,7 @@ import { animated } from "react-spring";
 import React from "react";
 import { useProjectCardAnimation } from "../../Utils/Animations";
 import {useNavigate} from "react-router-dom";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 function ProjectCard({ project }) {
     const { ref, animationProps } = useProjectCardAnimation();
@@ -20,6 +21,9 @@ function ProjectCard({ project }) {
     return (
         <animated.div ref={ref} style={animationProps} className="project-card-container">
             <div className="project-card-img-container" onClick={handleImageClick}>
+                <div className="project-open-button">
+                    <OpenInNewIcon />
+                </div>
                 <div className="project-card-tag-container">
                     {project.technologies.map((tech, index) => (
                         <div key={index} className="project-card-tag">

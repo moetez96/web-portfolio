@@ -1,12 +1,18 @@
 
-function ProjectNote() {
-
+function ProjectNote({tech}) {
+    console.log(tech);
     return (
-        <div className="project-note-wrapper">
-            <div className="project-note">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-            </div>
-        </div>
+        <>
+            {tech && (
+                <div className="project-note-wrapper">
+                    <div className="project-note">
+                        {tech.map((t, index) => (
+                            <i key={index} className={`devicon-${t}-plain`}></i>
+                        ))}
+                    </div>
+                </div>
+            ) }
+        </>
     );
 }
 
