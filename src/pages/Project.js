@@ -20,6 +20,10 @@ function Project() {
     const section1Animation = useSection1Animation();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         if (name) {
             const project = projects.list.find((proj) => proj.name === name);
             const projectInfo = resume.projects.list.find((proj) => proj.name === name);
