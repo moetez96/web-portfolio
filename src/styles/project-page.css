@@ -36,7 +36,7 @@
 
 .section-type1 {
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -334,10 +334,6 @@ i {
 
     .picture-desc > p {
         font-size: 11px;
-    }
-
-    .section-type1 {
-        padding: 5px 0;
     }
 
     .picture-desc {
