@@ -1,6 +1,6 @@
 
 function ProjectNote({tech}) {
-    console.log(tech);
+
     return (
         <>
             {tech && (

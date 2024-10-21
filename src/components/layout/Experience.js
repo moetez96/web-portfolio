@@ -24,8 +24,8 @@ function Experience() {
                         <animated.div
                             className="vertical-line"
                             style={{
-                                transform: animationProps.transform.interpolate(
-                                    t => `scaleY(${animationProps.opacity.interpolate(o => o ? 1 : 0)})`
+                                transform: animationProps.transform.to(
+                                    t => `scaleY(${animationProps.opacity.to(o => o ? 1 : 0)})`
                                 ),
                                 transition: 'transform 0.6s 0.3s'
                             }}
