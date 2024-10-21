@@ -18,7 +18,7 @@ function About() {
             </div>
             <div className="about-skills-container">
                 <div className="about-skills">
-                    SKILLS
+                    Tools & Technologies
                 </div>
                 <div className="about-skills-list">
                     {skillsTrail.map((style, index) => (

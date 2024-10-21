@@ -8,7 +8,6 @@
   "skills": [
     "JavaScript",
     "Java",
-    "Python",
     "TypeScript",
     "Node.js",
     "HTML",
@@ -19,7 +18,10 @@
     "Angular",
     "MySQL",
     "MongoDB",
-    "PostgreSQL"
+    "PostgreSQL",
+    "Git",
+    "Jenkins",
+    "Docker"
   ],
   "socials": {
     "email": "moetez22@gmail.com",

@@ -1,12 +1,14 @@
 .project-card-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: max-content;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 1fr;
+    padding: 20px 0;
 }
 
 .project-card-img-container {
+    position: relative;
     border-radius: 12px;
     background-color: var(--secondary-background-color);
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -14,17 +16,18 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    height: max-content;
+    padding: 60px 0;
 }
 
 .project-card-img-container:hover {
     transform: translateY(-10px);
-    filter: var(--brightness-color);
+    filter: brightness(1.2);
 }
 
 .project-card-img {
     min-width: 75%;
     width: 100%;
-    min-height: max-content;
     height: 69%;
     background-color: var(--nav-text-color);
     border-radius: 12px;
@@ -36,7 +39,7 @@
     top: 10px;
     left: 10px;
     right: 10px;
-    width: 50%;
+    width: 100%;
     height: max-content;
     font-size: 14px;
     display: flex;
@@ -61,17 +64,18 @@
 }
 
 .project-card-overview {
-    padding-left: 32px;
-    padding-right: 32px;
-    height: 90%;
+    padding: 0 32px;
+    height: 88%;
     overflow-y: scroll;
-    >h2 {
-        margin: 0 0 10px;
-    }
+}
 
-    >p {
-        margin: 0;
-    }
+.project-card-overview > h2 {
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.project-card-overview > p {
+    margin: 0;
 }
 
 .project-card-overview::-webkit-scrollbar {
@@ -88,71 +92,70 @@
 }
 
 .project-card-info {
+    border: 0;
+}
 
-    >hr {
-        border: 0;
-        height: 1px;
-        max-width: 100%;
-        margin: 10px auto;
-    }
+.project-card-info > hr {
+    height: 1px;
+    max-width: 100%;
+    margin: 10px auto;
+}
 
-    >p {
-        margin: 0;
-    }
+.project-card-info > p {
+    margin: 0;
 }
 
 .project-card-btns {
     position: absolute;
+    height: max-content;
+    width: max-content;
     bottom: 8px;
     display: flex;
     gap: 20px;
+}
 
-    >button  {
-       border: 0;
-        background-color: transparent;
-        color: #7a9812;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        border-bottom: 2px solid #7a9812;
-        padding: 3px 0;
-        cursor: pointer;
-        font-size: 16px;
-        transition: transform 0.4s ease, filter 0.3s ease;
-    }
+.project-card-btns > button {
+    border: 0;
+    background-color: transparent;
+    color: #7a9812;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 2px solid #7a9812;
+    padding: 3px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
 
-    >button:hover {
-        transform: translateY(-4px);
-        filter: var(--brightness-color);
-    }
+.project-card-btns > button:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.2);
 }
 
 @media (max-width: 1024px) {
-
     .project-card-container {
         height: 420px;
     }
 
     .project-card-overview {
-        height: 85%;
+        height: 88%;
         padding-left: 22px;
         padding-right: 22px;
     }
 
-    .project-card-info {
-
-        >hr {
-            margin: 10px auto;
-        }
+    .project-card-info > hr {
+        margin: 10px auto;
     }
 
     .project-card-btns {
         bottom: 10px;
-        >button  {
-            padding: 2px 0;
-            font-size: 14px;
-        }
+    }
+
+    .project-card-btns > button {
+        padding: 2px 0;
+        font-size: 14px;
     }
 
     .project-card-tag {
@@ -161,13 +164,11 @@
 }
 
 @media (max-width: 768px) {
-
     .project-card-container {
-        min-height: 700px;
         height: max-content;
         max-height: 877px;
         grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: max-content 1fr;
         gap: 4px;
         width: 98%;
     }
@@ -181,10 +182,11 @@
 
     .project-card-btns {
         margin-top: 30px;
-        >button  {
-            padding: 2px 0;
-            font-size: 12px;
-        }
+    }
+
+    .project-card-btns > button {
+        padding: 2px 0;
+        font-size: 12px;
     }
 
     .project-card-img {
@@ -194,19 +196,22 @@
 }
 
 @media (max-width: 425px) {
-
-    .project-card-info {
-
-        >hr {
-            margin: 8px auto;
-        }
+    .project-card-info > hr {
+        margin: 8px auto;
     }
 
     .project-card-tag {
         height: 24px;
         font-size: 8px;
     }
+
     .project-card-img {
-        object-fit: fill;
+        object-fit: contain;
     }
+
+    .project-card-btns > button {
+        padding: 1px 0;
+        font-size: 10px;
+    }
+
 }

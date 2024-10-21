@@ -28,7 +28,10 @@ function ProjectCard({ project }) {
                     ))}
                 </div>
                 {project.imgPlaceholder ? (
-                    <img className="project-card-img" src={`/projects/${project.imgPlaceholder}`} alt={project.title} />
+                    <img className="project-card-img"
+                         loading="lazy"
+                         src={`/projects/${project.imgPlaceholder}`}
+                         alt={project.title} />
                 ) : (
                     <div className="project-card-img"/>
                 )}
@@ -44,28 +47,29 @@ function ProjectCard({ project }) {
                     ))}
                     <hr />
                 </div>
-                <div className="project-card-btns">
-                    {project.demo && project.demo !== "" && (
-                        <button onClick={() => handleButtonClick(project.demo)}>
-                            DEMO <ArrowOutwardOutlined />
-                        </button>
-                    )}
-                    {project.source && project.source !== "" ? (
-                        <button onClick={() => handleButtonClick(project.source)}>
-                            SEE ON GITHUB <GitHub />
-                        </button>
-                    ) : (
-                        <>
-                            <button onClick={() => handleButtonClick(project.sourceFrontend)}>
-                                FRONT-END <GitHub />
-                            </button>
-                            <button onClick={() => handleButtonClick(project.sourceBacked)}>
-                                BACK-END <GitHub />
-                            </button>
-                        </>
-                    )}
+            </div>
 
-                </div>
+            <div className="project-card-btns">
+                {project.demo && project.demo !== "" && (
+                    <button onClick={() => handleButtonClick(project.demo)}>
+                        DEMO <ArrowOutwardOutlined />
+                    </button>
+                )}
+                {project.source && project.source !== "" ? (
+                    <button onClick={() => handleButtonClick(project.source)}>
+                        SEE ON GITHUB <GitHub />
+                    </button>
+                ) : (
+                    <>
+                        <button onClick={() => handleButtonClick(project.sourceFrontend)}>
+                            FRONT-END <GitHub />
+                        </button>
+                        <button onClick={() => handleButtonClick(project.sourceBacked)}>
+                            BACK-END <GitHub />
+                        </button>
+                    </>
+                )}
+
             </div>
         </animated.div>
     );

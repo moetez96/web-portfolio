@@ -23,7 +23,11 @@ const CarouselComponent = ({ images }) => {
                 onChange={handleSlideChange}
             >
                 {images.map((elem, index) => (
-                    <img key={index} src={`/projects/${elem.image}`} alt={`Slide ${index + 1}`} loading="lazy"/>
+                    <img
+                        key={index}
+                        src={`/projects/${elem.image}`}
+                        alt={`Slide ${index + 1}`}
+                        loading="lazy"/>
                 ))}
             </Carousel>
             <div className="picture-desc">

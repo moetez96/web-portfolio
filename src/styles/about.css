@@ -12,7 +12,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 100%;
-    padding: 0 7% 60px;
+    padding: 0 7% 40px;
 }
 
 .about-skills-container {
@@ -68,7 +68,6 @@
 }
 
 @media (max-width: 1024px) {
-
     .about-skills-container {
         gap: 30px;
     }
@@ -89,7 +88,6 @@
 }
 
 @media (max-width: 768px) {
-
     .about-skills-container {
         gap: 25px;
     }
@@ -100,7 +98,7 @@
     }
 
     .about-skills-list {
-        max-width:90%;
+        max-width: 90%;
     }
 
     .about-skills {
@@ -115,16 +113,8 @@
 }
 
 @media (max-width: 425px) {
-
     .about-skills-container {
         gap: 20px;
-    }
-
-    .about-container {
-    }
-
-    .about-skills-list {
-        max-width: 95%;
     }
 
     .about-skills {
@@ -132,6 +122,7 @@
     }
 
     .about-skills-list {
+        max-width: 95%;
         gap: 6px;
     }
 
@@ -139,5 +130,4 @@
         padding: 6px 12px;
         font-size: 10px;
     }
-
 }

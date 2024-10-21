@@ -7,6 +7,9 @@ input, textarea {
     font: inherit;
     color: inherit;
     background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .contact-form {
@@ -15,22 +18,23 @@ input, textarea {
     align-items: flex-end;
     gap: 14px;
     width: 100%;
+}
 
-    >button {
-        width: 140px;
-        height: 54px;
-        background-color: #B2D630;
-        border: 0;
-        border-radius: 100px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: filter 0.5s ease;
-    }
+.contact-form > button {
+    width: 140px;
+    height: 54px;
+    background-color: #B2D630;
+    border: 0;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.5s ease;
+    -webkit-tap-highlight-color: transparent;
+}
 
-    >button:hover {
-        filter: var(--brightness-color);
-    }
+.contact-form > button:hover {
+    filter: var(--brightness-color);
 }
 
 .form-group {
@@ -38,65 +42,69 @@ input, textarea {
     flex-direction: column;
     gap: 4px;
     width: 95%;
+}
 
-    >label {
-        font-size: 14px;
-        color: var(--nav-text-color);
-    }
+.form-group > label {
+    font-size: 14px;
+    color: var(--nav-text-color);
+}
 
-    >input {
-        width: 100%;
-        height: 51px;
-        border: 0;
-        border-radius: 4px;
-        background-color: var(--secondary-background-color);
-        color: var(--text-color);
-        font-size: 16px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
+.form-group > input {
+    width: 100%;
+    height: 51px;
+    border-radius: 4px;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
 
-    >textarea {
-        width: 100%;
-        height: 156px;
-        border: 0;
-        border-radius: 4px;
-        background-color: var(--secondary-background-color);
-        color: var(--text-color);
-        font-size: 16px;
-        padding: 10px;
-        box-sizing: border-box;
-        resize: none;
-    }
+.form-group > textarea {
+    width: 100%;
+    height: 156px;
+    border-radius: 4px;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 @media (max-width: 768px) {
 
     .contact-form {
         gap: 12px;
+    }
 
-        >button {
-            width: 120px;
-            height: 44px;
-            font-size: 12px;
-        }
+    .contact-form > button {
+        width: 120px;
+        height: 44px;
+        font-size: 12px;
     }
 
     .form-group {
         width: 100%;
     }
 
-    >label {
+    .form-group > label {
         font-size: 12px;
     }
 
-    >input {
+    .form-group > input {
         height: 34px;
         font-size: 14px;
         padding: 8px;
     }
 
-    >textarea {
+    .form-group > textarea {
         height: 148px;
         font-size: 14px;
         padding: 8px;
@@ -105,24 +113,21 @@ input, textarea {
 
 @media (max-width: 425px) {
 
-    .contact-form {
-
-        >button {
-            width: 100px;
-            height: 40px;
-        }
+    .contact-form > button {
+        width: 100px;
+        height: 40px;
     }
 
-    >label {
+    .form-group > label {
         font-size: 10px;
     }
 
-    >input {
+    .form-group > input {
         height: 30px;
         font-size: 14px;
     }
 
-    >textarea {
+    .form-group > textarea {
         height: 140px;
     }
 }

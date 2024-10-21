@@ -14,7 +14,7 @@ function ProjectSectionType4() {
             <div className="section-images2">
                 {list.map((elem, index) => (
                     <div className="picture-wrapper2" style={{ top: index * 150 + 'px', left: index % 2 === 0 ? '200px' : '-200px' }}>
-                        <img src="" alt="project-pic"/>
+                        <img src="" loading="lazy" alt="project-pic"/>
                         <div className="picture-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                     </div>
                 ))}

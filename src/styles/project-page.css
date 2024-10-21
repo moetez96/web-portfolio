@@ -22,7 +22,7 @@
     font-size: 4rem;
 }
 
-.project-short-description{
+.project-short-description {
     font-size: 30px;
 }
 
@@ -101,7 +101,7 @@ ul, li {
     gap: 25px;
 }
 
-.section-type3 {
+.section-type3, .section-type4 {
     width: 100%;
     min-height: 400px;
     height: max-content;
@@ -111,33 +111,12 @@ ul, li {
     justify-content: center;
     align-items: center;
     padding: 0;
-
 }
 
-.section-type4 {
-    width: 100%;
-    min-height: 400px;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 0;
-
-}
-
-.section-images {
+.section-images, .section-images2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    width: 90%;
-}
-
-.section-images2 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
     gap: 10px;
     width: 90%;
 }
@@ -211,7 +190,7 @@ ul, li {
         font-size: 3rem;
     }
 
-    .project-short-description{
+    .project-short-description {
         font-size: 24px;
     }
 
@@ -252,7 +231,7 @@ ul, li {
         font-size: 2.5rem;
     }
 
-    .project-short-description{
+    .project-short-description {
         font-size: 20px;
     }
 
@@ -291,7 +270,6 @@ ul, li {
         justify-content: center;
         align-items: center;
     }
-
 }
 
 @media (max-width: 426px) {
@@ -308,7 +286,7 @@ ul, li {
         font-size: 2rem;
     }
 
-    .project-short-description{
+    .project-short-description {
         font-size: 18px;
     }
 

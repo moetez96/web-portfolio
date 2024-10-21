@@ -9,7 +9,7 @@ function ProjectSectionType1({description, image, imgDesc}) {
                 </p>
             </div>
             <div className="picture-wrapper">
-                <img src={`/projects/${image}`} alt="project-pic"/>
+                <img src={`/projects/${image}`} alt="project-pic" loading="lazy"/>
                 <div className="picture-desc">
                     <p>{imgDesc}</p>
                 </div>

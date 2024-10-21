@@ -22,7 +22,7 @@ function ProjectSectionType3({ sectionInfo }) {
             <animated.div style={imagesAnimationProps} className="section-images">
                 {sectionInfo.images?.map((image, index) => (
                     <div key={index} className="picture-wrapper">
-                        <img src={`/projects/${image.image}`} alt={image.imgDesc} />
+                        <img src={`/projects/${image.image}`} alt={image.imgDesc} loading="lazy" />
                         <div className="picture-desc">
                             <p>{image.imgDesc}</p>
                         </div>

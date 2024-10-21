@@ -25,7 +25,7 @@ function ProjectSectionType2({ direction, sectionInfo }) {
                         <CarouselComponent images={sectionInfo.images} />
                     ) : (
                         <>
-                            <img src={`/projects/${sectionInfo.image}`} alt="project-pic" />
+                            <img src={`/projects/${sectionInfo.image}`} alt="project-pic" loading="lazy" />
                             <div className="picture-desc">
                                 <p>{sectionInfo.imgDesc}</p>
                             </div>

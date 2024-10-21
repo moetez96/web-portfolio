@@ -2,13 +2,15 @@
     position: relative;
     width: 100%;
     height: max-content;
-    max-height: 100dvh;
+    max-height: 100vh;
     padding-top: 96px;
     bottom: 10px;
     color: var(--text-color);
     background-color: var(--primary-background-color);
 }
 .intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +22,12 @@
 
 .profile-desc {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     > h2 {
         margin: 25px 0;
@@ -29,6 +36,8 @@
 
 .profile-contact-btns {
     width: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -50,17 +59,23 @@
         position: absolute;
         right: 20px;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 12px;
         height: 12px;
         background-color: #000;
         border-radius: 50%;
+        -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         justify-content: center;
         align-items: center;
         > span {
             display: none;
+            -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
             color: white;
         }
@@ -86,6 +101,8 @@
     min-height: 54px;
     background-color: transparent;
     border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,10 +110,13 @@
     padding: 0;
     border: 1px solid var(--text-color);
     cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 .contact-icons a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +141,6 @@
 }
 
 @media (max-width: 1024px) {
-
     .profile-pic-container {
         width: 47%;
         height: 520px;
@@ -145,7 +164,6 @@
         }
 
         > button .circle {
-            position: absolute;
             right: 15px;
             width: 10px;
             height: 10px;
@@ -161,20 +179,20 @@
         min-width: 50px;
         min-height: 50px;
     }
-
 }
 
 @media (max-width: 768px) {
-
     .intro-wrapper {
         padding-top: 66px;
     }
 
     .intro-container {
         margin-top: 30px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-
 
     .profile-desc {
         width: 100%;
@@ -191,7 +209,6 @@
 }
 
 @media (max-width: 425px) {
-
     .intro-wrapper {
         padding-top: 56px;
     }
@@ -218,14 +235,9 @@
         }
 
         > button .circle {
-            position: absolute;
             right: 10px;
             width: 8px;
             height: 8px;
-        }
-
-        > circle >span >svg {
-            font-size: small;
         }
 
         > button:hover .circle {
@@ -238,9 +250,6 @@
     .contact-icons {
         min-width: 40px;
         min-height: 40px;
-        >svg {
-            font-size: 25px;
-        }
     }
 
     .profile-pic-container {
