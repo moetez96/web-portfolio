@@ -3,7 +3,7 @@ import { DarkModeOutlined, LightModeOutlined, Menu, MenuOpen } from "@mui/icons-
 import React, { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom';
-import cv from '../../assets/Moetez_Ayari_CV.pdf';
+import {downloadCV} from "../../Utils/Utils";
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
@@ -47,19 +47,7 @@ function Navbar({ handleThemeChange, isDark }) {
     };
 
     const handleDownloadCV = () => {
-        fetch(cv)
-            .then(response => response.blob())
-            .then(blob => {
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Moetez_Ayari_CV.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            })
-            .catch(error => console.error('Error downloading CV:', error));
+        downloadCV();
     };
 
     return (

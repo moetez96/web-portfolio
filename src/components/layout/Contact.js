@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { useContactAnimations } from "../../Utils/Animations";
 import resume from "../../assets/resume.json";
 import emailjs from 'emailjs-com';
-import cv from "../../assets/Moetez_Ayari_CV.pdf";
+import {downloadCV} from "../../Utils/Utils";
 
 function Contact() {
     const { infoRef, infoAnimation, formRef, formAnimation } = useContactAnimations();
@@ -28,19 +28,7 @@ function Contact() {
     };
 
     const handleDownloadCV = () => {
-        fetch(cv)
-            .then(response => response.blob())
-            .then(blob => {
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Moetez_Ayari_CV.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            })
-            .catch(error => console.error('Error downloading CV:', error));
+        downloadCV();
     };
 
     const validateForm = () => {
