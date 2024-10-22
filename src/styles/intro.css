@@ -87,7 +87,9 @@
         right: 10px;
 
         > span {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
