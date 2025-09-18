@@ -1,17 +1,11 @@
-import cv from "../assets/Moetez_Ayari_CV.pdf";
+const CV_URL =
+    "https://drive.google.com/uc?export=download&id=1NJwbJEbufPU94Q4I2CJeKPcxd0F73t_Y";
 
 export const downloadCV = () => {
-    fetch(cv)
-        .then(response => response.blob())
-        .then(blob => {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Moetez_Ayari_CV.pdf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        })
-        .catch(error => console.error('Error downloading CV:', error));
+    const link = document.createElement("a");
+    link.href = CV_URL;
+    link.download = "Moetez_Ayari_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 };

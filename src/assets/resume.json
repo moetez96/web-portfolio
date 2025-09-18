@@ -15,13 +15,34 @@
     "ReactJS",
     "ExpressJS",
     "SpringBoot",
+    "J2EE",
     "Angular",
     "MySQL",
     "MongoDB",
     "PostgreSQL",
+    "OracleDB",
     "Git",
     "Jenkins",
-    "Docker"
+    "Openshift",
+    "Docker",
+    "Grafana"
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "badge": "certifications/AWSCP.png",
+      "link": "https://www.credly.com/badges/2cd113bc-9fa6-40a2-8d6c-f52f47d86187/linked_in_profile"
+    },
+    {
+      "name": "Oracle Database SQL Certified Associate",
+      "badge": "certifications/OCASQL12C.png",
+      "link": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=3EC153068BC00BADC6B54811A58641C2FC9C281A5EB08FEABFA5D6AD85FAB8A7"
+    },
+    {
+      "name": "Oracle Certified Professional: Java SE 21 Developer",
+      "badge": "certifications/JSE21OCP.png",
+      "link": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9E1E2B9F11B69FBE7E4008020DCC852E4D7309A0B51AF7ED411AF6288CD7DA6C"
+    }
   ],
   "socials": {
     "email": "moetez22@gmail.com",
@@ -37,13 +58,13 @@
           "projectName": "BMW Damage Management Application",
           "role": "Full Stack Developer",
           "technologies": "Angular, Spring Boot, Java 11, Node JS, PostgreSQL, Docker, Jenkins, AWS S3, Bitbucket",
-          "description": "I participated in developing a BMW application focused on damage management during car transportation, contributing to the migration from monolithic to microservices architecture while gaining insights into best practices. I also played a role in enhancing the user interface to improve system functionality and user experience, gaining valuable experience in both backend and frontend development within a collaborative team setting."
+          "description": "I contributed to the development of a web application for managing vehicle damage during transportation, assisting in the migration from a monolithic architecture to a microservices-based system. I enhanced the UI to improve user experience and functionality, while also designing and developing reusable components in Angular. In addition, I optimized the performance of frequently used database queries and gained valuable experience in both back-end and front-end development within a collaborative team environment."
         },
         {
           "projectName": "Tunisie Telecom BSCS",
           "role": "Full Stack Developer",
-          "technologies": "Angular, Spring Boot, Java 11, J2EE, PostgreSQL, OracleDB,Docker, Jenkins, Gitlab",
-          "description": "I developed and maintained various components of the Billing System for a telecom operator, Tunisie Telecom. My responsibilities included implementing CI/CD pipelines using Jenkins to streamline deployment processes. Additionally, I collaborated in the design and development of new microservices, enhancing the system's scalability and performance."
+          "technologies": "Angular, Spring Boot, J2EE, Microservices, Jenkins, OracleDB, SQL, Docker, OpenShift, Grafana.",
+          "description": "I developed and maintained various components of the Billing System for a telecom operator, collaborating on the design and development of new microservices using Spring Boot. I migrated SOAP web services to RESTful APIs within a microservices architecture and implemented an OpenShift Logging Cluster while integrating Grafana for real-time monitoring and log visualization. Additionally, I integrated CI/CD pipelines with Jenkins to streamline deployment and testing processes, and I designed and optimized new and existing UI components to enhance system performance and usability."
         }
       ]
     },
@@ -112,7 +133,10 @@
           "Real-time Notifications: Receive real-time notifications for new messages, friend requests, and online/offline.",
           "Responsive Design: Fully responsive design, ensuring smooth functionality across desktops, tablets, and mobile devices."
         ],
-        "technologies": ["Spring Boot", "Angular"],
+        "technologies": [
+          "Spring Boot",
+          "Angular"
+        ],
         "demo": "https://chat-app-rust-phi.vercel.app/",
         "sourceFrontend": "https://github.com/moetez96/chat-app",
         "sourceBacked": "https://github.com/moetez96/chat-api",
@@ -134,7 +158,10 @@
           "Track Navigation: Allows jumping to the next or previous track if available.",
           "Responsive Design: Optimized for both desktop and mobile devices."
         ],
-        "technologies": ["React", "IndexedDB (LocalBase)"],
+        "technologies": [
+          "React",
+          "IndexedDB (LocalBase)"
+        ],
         "demo": "https://music-player-app-blond.vercel.app/",
         "source": "https://github.com/moetez96/music-player-app",
         "imgPlaceholder": "musicapppic.png"
@@ -151,7 +178,10 @@
           "Student Scores: Students can view all Students Learner Profiles, Sorted by GPA.",
           "User Profile Management: Ability for students to update personal information, view enrolled courses, and manage their courses."
         ],
-        "technologies": ["Spring Boot", "Thymleaf"],
+        "technologies": [
+          "Spring Boot",
+          "Thymleaf"
+        ],
         "demo": "https://university-enrollement.onrender.com",
         "source": "https://github.com/moetez96/university-enrollement",
         "imgPlaceholder": "universityapppic.png"

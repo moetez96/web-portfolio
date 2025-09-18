@@ -44,6 +44,20 @@
     flex-wrap: wrap;
 }
 
+.cert-badge {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 8px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.cert-badge:hover {
+    transform: scale(1.2);
+}
+
+
 @keyframes lightUp {
     0%, 100% {
         border-color: var(--text-color);
@@ -81,6 +95,11 @@
         gap: 8px;
     }
 
+    .cert-badge {
+        width: 150px;
+        height: 150px;
+    }
+
     .skill-chip {
         padding: 10px 20px;
         font-size: 14px;
@@ -99,6 +118,11 @@
 
     .about-skills-list {
         max-width: 90%;
+    }
+
+    .cert-badge {
+        width: 110px;
+        height: 110px;
     }
 
     .about-skills {
