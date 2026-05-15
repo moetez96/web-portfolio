@@ -65,10 +65,6 @@ function Intro() {
                         decoding="async"
                         fetchPriority="high"
                     />
-                    <div className="profile-signal-card">
-                        <span>3+ years</span>
-                        <p>Full-stack delivery across web apps, APIs, cloud, and DevOps.</p>
-                    </div>
                 </animated.div>
             </div>
         </div>
