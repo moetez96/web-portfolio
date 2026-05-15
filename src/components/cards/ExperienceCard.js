@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { animated } from "react-spring";
 import {useExperienceCardAnimations} from "../../Utils/Animations";
+import { useIsMobile } from "../../Utils/hooks";
 
 function ExperienceCard({ exp, index }) {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const isMobile = useIsMobile();
     const { ref, animationProps, springs, handlePaginationClick, slideAnimation, selectIndex, selectIndexContent }
         = useExperienceCardAnimations(index, exp.projects.length);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     return (
         <animated.div

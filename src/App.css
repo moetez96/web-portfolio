@@ -1,18 +1,25 @@
 .App {
   position: relative;
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   max-width: 1920px;
   margin: 0 auto;
-  background-color: var(--primary-background-color);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(178, 214, 48, 0.08), transparent 28%),
+    var(--primary-background-color);
+  background-size: 72px 72px, 72px 72px, auto, auto;
 }
 
 hr {
-  background-color: #484848;
-  color: #484848;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  color: var(--border-color);
   border: 0;
   height: 1px;
-  max-width: 98%;
-  margin: 60px auto;
+  max-width: 86%;
+  margin: 88px auto;
 }
 
 p {
@@ -21,5 +28,5 @@ p {
 
 h1 {
   font-family: "Bebas Neue", Arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 }

@@ -52,7 +52,7 @@
   "experiences": [
     {
       "title": "Deloitte Tunisia",
-      "date": "October 2022 – Present",
+      "date": "October 2022 - Present",
       "projects": [
         {
           "projectName": "BMW Damage Management Application",
@@ -94,7 +94,7 @@
     },
     {
       "title": "ISI KEF",
-      "date": "January 2019 – June 2019",
+      "date": "January 2019 - June 2019",
       "projects": [
         {
           "projectName": "University Events Mobile Application",
@@ -106,7 +106,7 @@
     },
     {
       "title": "Cryptec",
-      "date": "June 2018 – August 2018",
+      "date": "June 2018 - August 2018",
       "projects": [
         {
           "projectName": "Management Desktop Application",
@@ -139,7 +139,7 @@
         ],
         "demo": "https://chat-app-rust-phi.vercel.app/",
         "sourceFrontend": "https://github.com/moetez96/chat-app",
-        "sourceBacked": "https://github.com/moetez96/chat-api",
+        "sourceBackend": "https://github.com/moetez96/chat-api",
         "imgPlaceholder": "chatapp.png"
       },
       {
@@ -169,8 +169,8 @@
       {
         "id": 3,
         "name": "university-enrollment",
-        "title": "University Enrollement",
-        "description": "University Enrollement is a monolithic web application that allows students to register, login and enroll in available courses.",
+        "title": "University Enrollment",
+        "description": "University Enrollment is a monolithic web application that allows students to register, login and enroll in available courses.",
         "features": [
           "User Registration and Login: Students can create accounts with their personal information and login.",
           "Course Catalog & Programs: A list of available courses and programs",
@@ -180,7 +180,7 @@
         ],
         "technologies": [
           "Spring Boot",
-          "Thymleaf"
+          "Thymeleaf"
         ],
         "demo": "https://university-enrollement.onrender.com",
         "source": "https://github.com/moetez96/university-enrollement",

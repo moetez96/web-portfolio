@@ -1,157 +1,160 @@
 .about-wrapper {
     position: relative;
     width: 100%;
-    max-height: max-content;
-    bottom: 10px;
     color: var(--text-color);
-    background-color: var(--primary-background-color);
+    background-color: transparent;
 }
 
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 100%;
-    padding: 0 7% 40px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 42px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px 54px;
+}
+
+.about-container h1 {
+    position: sticky;
+    top: 120px;
+    height: max-content;
+}
+
+.about-desc {
+    padding: 28px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.16);
+}
+
+.about-desc p {
+    margin: 0;
 }
 
 .about-skills-container {
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 26px;
+    width: min(1180px, calc(100% - 56px));
+    margin: 0 auto;
 }
 
 .about-skills {
-    height: max-content;
-    text-align: center;
-    padding: 8px 14px;
     width: max-content;
-    border-radius: 12px;
-    font-size: 2.5rem;
-    font-weight: bolder;
-    border: 2px solid var(--text-color);
+    height: max-content;
+    padding: 10px 16px;
+    border: 1px solid rgba(178, 214, 48, 0.28);
+    border-radius: 999px;
+    color: var(--accent-color);
+    background-color: rgba(178, 214, 48, 0.1);
+    font-size: 1rem;
+    font-weight: 900;
     line-height: 100%;
-    background-color: var(--secondary-background-color);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .about-skills-list {
     display: flex;
     justify-content: center;
-    max-width: 80%;
+    max-width: 980px;
     gap: 10px;
     flex-wrap: wrap;
 }
 
 .cert-badge {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin: 8px;
     cursor: pointer;
-    transition: transform 0.5s ease;
+    filter: saturate(0.92);
+    transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .cert-badge:hover {
-    transform: scale(1.2);
-}
-
-
-@keyframes lightUp {
-    0%, 100% {
-        border-color: var(--text-color);
-    }
-    50% {
-        border-color: var(--primary-background-color);
-    }
+    filter: saturate(1.1);
+    transform: translateY(-6px) scale(1.04);
 }
 
 .skill-chip {
-    border: 1px solid var(--text-color);
-    background-color: var(--secondary-background-color);
-    height: max-content;
-    text-align: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
     width: max-content;
-    border-radius: 40px;
-    animation: lightUp 5s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.5s);
+    height: max-content;
+    padding: 12px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.045);
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-chip:hover {
+    border-color: rgba(178, 214, 48, 0.42);
+    background-color: rgba(178, 214, 48, 0.1);
+    transform: translateY(-3px);
 }
 
 @media (max-width: 1024px) {
-    .about-skills-container {
-        gap: 30px;
-    }
-
-    .about-skills {
-        padding: 6px 12px;
-        font-size: 26px;
-    }
-
-    .about-skills-list {
-        gap: 8px;
+    .about-container {
+        gap: 28px;
     }
 
     .cert-badge {
-        width: 150px;
-        height: 150px;
+        width: 132px;
+        height: 132px;
     }
 
     .skill-chip {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 10px 16px;
+        font-size: 13px;
     }
 }
 
 @media (max-width: 768px) {
-    .about-skills-container {
-        gap: 25px;
-    }
-
     .about-container {
-        grid-template-columns: none;
-        grid-template-rows: max-content 1fr;
+        grid-template-columns: 1fr;
+        padding: 0 7% 42px;
     }
 
-    .about-skills-list {
-        max-width: 90%;
+    .about-container h1 {
+        position: static;
+    }
+
+    .about-desc {
+        padding: 22px;
+    }
+
+    .about-skills-container {
+        width: 90%;
     }
 
     .cert-badge {
-        width: 110px;
-        height: 110px;
-    }
-
-    .about-skills {
-        padding: 4px 10px;
-        font-size: 24px;
+        width: 106px;
+        height: 106px;
     }
 
     .skill-chip {
-        padding: 8px 16px;
+        padding: 8px 14px;
         font-size: 12px;
     }
 }
 
 @media (max-width: 425px) {
-    .about-skills-container {
-        gap: 20px;
-    }
-
-    .about-skills {
-        font-size: 22px;
+    .about-desc {
+        padding: 18px;
     }
 
     .about-skills-list {
-        max-width: 95%;
-        gap: 6px;
+        gap: 7px;
     }
 
     .skill-chip {
-        padding: 6px 12px;
-        font-size: 10px;
+        padding: 7px 12px;
+        font-size: 11px;
     }
 }

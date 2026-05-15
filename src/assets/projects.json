@@ -64,7 +64,7 @@
           "points": [
             "Friend Search: Users can search for friends by username, making it easy to find and connect with others.",
             "Friend Requests: Users can send, accept, decline, or cancel friend requests. Requests are processed in real-time using WebSocket, ensuring that both parties receive instant notifications when a request is sent or responded to.",
-            "Friend Status Tracking: The app updates and displays friends’ online/offline statuses in real-time, also using WebSocket. Whenever a friend logs in or out, their status changes instantly, enhancing the dynamic user experience."
+            "Friend Status Tracking: The app updates and displays friends' online/offline statuses in real-time, also using WebSocket. Whenever a friend logs in or out, their status changes instantly, enhancing the dynamic user experience."
           ],
           "images": [
             {

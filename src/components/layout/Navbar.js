@@ -4,20 +4,17 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {downloadCV} from "../../Utils/Utils";
+import { useIsMobile } from "../../Utils/hooks";
 
 function Navbar({ handleThemeChange, isDark }) {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const isMobile = useIsMobile();
     const navbarRef = useRef(null);
     const navigate = useNavigate();
     const location = useLocation();
 
     const handleMenuOpen = () => {
         setNavMenuOpen(!navMenuOpen);
-    };
-
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768);
     };
 
     const handleClickOutside = (event) => {
@@ -27,13 +24,17 @@ function Navbar({ handleThemeChange, isDark }) {
     };
 
     useEffect(() => {
-        window.addEventListener("resize", handleResize);
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
-            window.removeEventListener("resize", handleResize);
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        if (!isMobile) {
+            setNavMenuOpen(false);
+        }
+    }, [isMobile]);
 
     const handleThemeClick = () => {
         handleThemeChange();
@@ -57,13 +58,19 @@ function Navbar({ handleThemeChange, isDark }) {
                     M.A
                 </ScrollLink>
             </h1>
-            <div className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`} onClick={handleMenuOpen}>
+            <button
+                type="button"
+                className={`navbar-menu-icon ${navMenuOpen ? 'open' : ''}`}
+                onClick={handleMenuOpen}
+                aria-label={navMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={navMenuOpen}
+            >
                 {navMenuOpen ? (
                     <MenuOpen fontSize={'large'} />
                 ) : (
                     <Menu fontSize={'large'} />
                 )}
-            </div>
+            </button>
             <div className={`navbar-menu-container ${isMobile ? `${navMenuOpen ? 'open' : 'closed'}` : ''}`}>
                 <ul className="navbar-menu">
                     <li>
@@ -71,7 +78,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="about"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -84 : -106}
                             onClick={() => handleHomePageScroll('about')}
                         >
                             About
@@ -82,7 +89,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="experience"
                             smooth
                             spy
-                            offset={isMobile ? -128 : -158}
+                            offset={isMobile ? -94 : -116}
                             onClick={() => handleHomePageScroll('experience')}
                         >
                             Experience
@@ -93,7 +100,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="projects"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -84 : -106}
                             onClick={() => handleHomePageScroll('projects')}
                         >
                             Projects
@@ -104,7 +111,7 @@ function Navbar({ handleThemeChange, isDark }) {
                             to="contact"
                             smooth
                             spy
-                            offset={isMobile ? -118 : -148}
+                            offset={isMobile ? -84 : -106}
                             onClick={() => handleHomePageScroll('contact')}
                         >
                             Contact
@@ -115,15 +122,20 @@ function Navbar({ handleThemeChange, isDark }) {
                 <div className="navbar-divider"></div>
 
                 <div className="navbar-options">
-                    <div className="navbar-light-dark-mode" onClick={handleThemeClick}>
+                    <button
+                        type="button"
+                        className="navbar-light-dark-mode"
+                        onClick={handleThemeClick}
+                        aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+                    >
                         {isDark ? (
                             <LightModeOutlined fontSize={'large'} />
                         ) : (
                             <DarkModeOutlined fontSize={'large'} />
                         )}
-                    </div>
+                    </button>
 
-                    <button className="navbar-download-button" onClick={handleDownloadCV}>
+                    <button type="button" className="navbar-download-button" onClick={handleDownloadCV}>
                         Download CV
                     </button>
                 </div>

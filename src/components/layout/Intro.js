@@ -55,9 +55,21 @@ function Intro() {
                     </span>
                 </div>
 
-                <animated.img style={profilePicSpring} className="profile-pic-container" src="/Photo.png">
-
-                </animated.img>
+                <animated.div style={profilePicSpring} className="profile-visual">
+                    <img
+                        className="profile-pic-container"
+                        src="/Photo.png"
+                        alt="Moetez Ayari"
+                        width="500"
+                        height="600"
+                        decoding="async"
+                        fetchPriority="high"
+                    />
+                    <div className="profile-signal-card">
+                        <span>3+ years</span>
+                        <p>Full-stack delivery across web apps, APIs, cloud, and DevOps.</p>
+                    </div>
+                </animated.div>
             </div>
         </div>
     );

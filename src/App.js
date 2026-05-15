@@ -1,33 +1,25 @@
 import './App.css';
 import Navbar from "./components/layout/Navbar";
-import { useState, useEffect } from "react";
+import { Suspense, lazy, useState, useEffect } from "react";
 import {BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate} from "react-router-dom";
-import Home from "./pages/Home";
-import Project from "./pages/Project";
 import Footer from "./components/layout/Footer";
 import { scroller } from 'react-scroll';
+import { useIsMobile } from "./Utils/hooks";
+
+const Home = lazy(() => import("./pages/Home"));
+const Project = lazy(() => import("./pages/Project"));
 
 function ScrollToSection({ setContentLoaded }) {
     const location = useLocation();
     const navigate = useNavigate();
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768);
-    };
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    const isMobile = useIsMobile();
 
     useEffect(() => {
         if (location.state?.scrollTo) {
             const offset =
                 location.state.scrollTo === 'experience'
-                    ? (isMobile ? -128 : -158)
-                    : (isMobile ? -118 : -148);
+                    ? (isMobile ? -94 : -116)
+                    : (isMobile ? -84 : -106);
 
             scroller.scrollTo(location.state.scrollTo, {
                 smooth: true,
@@ -36,20 +28,26 @@ function ScrollToSection({ setContentLoaded }) {
             });
 
 
-            setTimeout(() => {
+            const timeoutId = setTimeout(() => {
                 navigate(location.pathname, { replace: true, state: {} });
                 setContentLoaded(true);
             }, 500);
+
+            return () => clearTimeout(timeoutId);
         } else {
             setContentLoaded(true);
         }
-    }, [location, navigate, setContentLoaded]);
+    }, [isMobile, location, navigate, setContentLoaded]);
 
     return null;
 }
 
 function App() {
     const [isDark, setIsDark] = useState(() => {
+        if (typeof window === "undefined") {
+            return true;
+        }
+
         const savedTheme = localStorage.getItem('isDark');
         return savedTheme !== null ? JSON.parse(savedTheme) : true;
     });
@@ -71,11 +69,13 @@ function App() {
                 <ScrollToSection setContentLoaded={setContentLoaded} />
                 {contentLoaded && (
                     <>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/project/:name" element={<Project />} />
-                            <Route path="*" element={<Navigate to="/" />} />
-                        </Routes>
+                        <Suspense fallback={null}>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/project/:name" element={<Project />} />
+                                <Route path="*" element={<Navigate to="/" />} />
+                            </Routes>
+                        </Suspense>
                         <Footer />
                     </>
                 )}

@@ -5,7 +5,6 @@ import { animated } from "react-spring";
 import React, { useState } from "react";
 import { useContactAnimations } from "../../Utils/Animations";
 import resume from "../../assets/resume.json";
-import emailjs from 'emailjs-com';
 import {downloadCV} from "../../Utils/Utils";
 
 function Contact() {
@@ -18,6 +17,8 @@ function Contact() {
     });
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+    const [submitError, setSubmitError] = useState("");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -51,18 +52,14 @@ function Contact() {
             setErrors(newErrors);
         } else {
             sendEmail();
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            });
-            setErrors({});
-            setIsSubmitted(true);
         }
     };
 
-    const sendEmail = () => {
+    const sendEmail = async () => {
+        setIsSending(true);
+        setIsSubmitted(false);
+        setSubmitError("");
+
         const templateParams = {
             from_name: formData.name,
             from_email: formData.email,
@@ -71,22 +68,32 @@ function Contact() {
             to_email: 'moetez22@gmail.com'
         };
 
-        emailjs.send('service_ueufor5', 'template_cz51yen', templateParams, 'GmDQum_6vGEtTzTYK')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.log('FAILED...', err);
+        try {
+            const emailjs = await import('emailjs-com');
+            await emailjs.default.send('service_ueufor5', 'template_cz51yen', templateParams, 'GmDQum_6vGEtTzTYK');
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
             });
+            setErrors({});
+            setIsSubmitted(true);
+        } catch {
+            setSubmitError("Something went wrong. Please email me directly instead.");
+        } finally {
+            setIsSending(false);
+        }
     };
 
     return (
         <div className="contact-wrapper" id="contact">
             <div className="contact-container">
                 <animated.div ref={infoRef} style={infoAnimation} className="contact-info">
-                    <h1>Let’s connect</h1>
+                    <h1>Let's connect</h1>
                     <span className="contact-desc">
                         <p>Say hello at <a href={`mailto:${resume.socials.email}`}>{resume.socials.email}</a></p>
-                        <p>For more info, here’s my <span onClick={handleDownloadCV}>resume</span></p>
+                        <p>For more info, here's my <button type="button" onClick={handleDownloadCV}>resume</button></p>
                     </span>
                     <div className="contact-apps">
                         <a href={resume.socials.linkedin} target="_blank" rel="noopener noreferrer">
@@ -147,8 +154,11 @@ function Contact() {
                         ></textarea>
                         {errors.message && <span className="error">{errors.message}</span>}
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled={isSending}>
+                        {isSending ? "Sending" : "Submit"}
+                    </button>
                     {isSubmitted && <p className="success-message">Your message has been sent successfully!</p>}
+                    {submitError && <p className="error-message">{submitError}</p>}
                 </animated.form>
             </div>
         </div>

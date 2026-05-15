@@ -4,12 +4,14 @@
     height: auto;
     padding-bottom: 10px;
     color: var(--text-color);
-    background-color: var(--primary-background-color);
+    background-color: transparent;
 }
 
 .experience-container {
-    padding: 0 7%;
+    max-width: 1180px;
     height: auto;
+    margin: 0 auto;
+    padding: 0 28px;
 }
 
 .experience-header {
@@ -17,18 +19,18 @@
 }
 
 .experience-timeline-container {
-    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    width: 100%;
 }
 
 .timeline {
     position: relative;
-    margin: 30px auto;
-    padding: 20px 0;
     width: 100%;
+    margin: 38px auto 0;
+    padding: 10px 0;
 }
 
 .timeline .vertical-line {
@@ -36,47 +38,23 @@
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 6px;
-    background-color: var(--secondary-background-color);
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--accent-color), var(--border-color), transparent);
     transform: translateX(-50%);
     z-index: -1;
 }
 
-@media (max-width: 1024px) {
-
-    .timeline {
-        margin: 20px auto;
-    }
-
-    .experience-header {
-        width: 450px;
-    }
-
-    .experience-header {
-        width: 80%;
-    }
-}
-
 @media (max-width: 768px) {
-
-    .experience-header {
-        width: 100%;
+    .experience-container {
+        padding: 0 7%;
     }
 
     .timeline {
-        margin: 10px auto;
-        padding: 10px 0;
+        margin: 24px auto 0;
+        padding: 8px 0;
     }
 
     .timeline .vertical-line {
         left: 0;
     }
-}
-
-@media (max-width: 425px) {
-
-    .experience-header {
-        width: 100%;
-    }
-
 }

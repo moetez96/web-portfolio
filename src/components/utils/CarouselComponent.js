@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../../styles/carousel.css';
 
-const CarouselComponent = ({ images }) => {
+const CarouselComponent = ({ images, onImageClick }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handleSlideChange = (index) => {
@@ -27,7 +27,10 @@ const CarouselComponent = ({ images }) => {
                         key={index}
                         src={`/projects/${elem.image}`}
                         alt={`Slide ${index + 1}`}
-                        loading="lazy"/>
+                        loading="lazy"
+                        className={onImageClick ? 'clickable-img' : ''}
+                        onClick={onImageClick ? () => onImageClick(images, index) : undefined}
+                    />
                 ))}
             </Carousel>
             <div className="picture-desc">

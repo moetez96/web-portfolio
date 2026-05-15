@@ -1,4 +1,4 @@
-function ProjectSectionType1({description, image, imgDesc}) {
+function ProjectSectionType1({description, image, imgDesc, onImageClick}) {
 
     return (
         <div className="section-type1">
@@ -9,7 +9,13 @@ function ProjectSectionType1({description, image, imgDesc}) {
                 </p>
             </div>
             <div className="picture-wrapper">
-                <img src={`/projects/${image}`} alt="project-pic" loading="lazy"/>
+                <img
+                    src={`/projects/${image}`}
+                    alt="project-pic"
+                    loading="lazy"
+                    className={onImageClick ? 'clickable-img' : ''}
+                    onClick={onImageClick ? () => onImageClick(`/projects/${image}`, imgDesc) : undefined}
+                />
                 <div className="picture-desc">
                     <p>{imgDesc}</p>
                 </div>

@@ -3,7 +3,7 @@ import React from "react";
 import {useProjectSectionAnimation} from "../../Utils/Animations";
 import { animated } from "react-spring";
 
-function ProjectSectionType2({ direction, sectionInfo }) {
+function ProjectSectionType2({ direction, sectionInfo, onImageClick }) {
     const { ref, containerAnimationProps, descriptionAnimationProps, imagesAnimationProps } = useProjectSectionAnimation();
 
     return (
@@ -22,10 +22,16 @@ function ProjectSectionType2({ direction, sectionInfo }) {
                 </animated.div>
                 <animated.div className="picture-wrapper" style={imagesAnimationProps}>
                     {sectionInfo.images ? (
-                        <CarouselComponent images={sectionInfo.images} />
+                        <CarouselComponent images={sectionInfo.images} onImageClick={onImageClick} />
                     ) : (
                         <>
-                            <img src={`/projects/${sectionInfo.image}`} alt="project-pic" loading="lazy" />
+                            <img
+                                src={`/projects/${sectionInfo.image}`}
+                                alt="project-pic"
+                                loading="lazy"
+                                className={onImageClick ? 'clickable-img' : ''}
+                                onClick={onImageClick ? () => onImageClick(`/projects/${sectionInfo.image}`, sectionInfo.imgDesc) : undefined}
+                            />
                             <div className="picture-desc">
                                 <p>{sectionInfo.imgDesc}</p>
                             </div>
