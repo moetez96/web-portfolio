@@ -30,15 +30,16 @@ function ProjectCard({ project }) {
                 onClick={handleImageClick}
                 aria-label={`Open ${project.title} project details`}
             >
-                <div className="project-open-button">
-                    <OpenInNewIcon />
-                </div>
                 <div className="project-card-tag-container">
                     {project.technologies.map((tech, index) => (
-                        <div key={index} className="project-card-tag">
+                        <div key={index} className="project-card-tag chip-style">
                             {tech}
                         </div>
                     ))}
+
+                    <div className="project-open-button chip-style" aria-hidden>
+                        <OpenInNewIcon />
+                    </div>
                 </div>
                 {project.imgPlaceholder ? (
                     <img className="project-card-img"
