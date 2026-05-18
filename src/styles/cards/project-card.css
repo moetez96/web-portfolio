@@ -39,7 +39,7 @@
     color: inherit;
     font: inherit;
     background:
-        linear-gradient(135deg, rgba(178, 214, 48, 0.16), rgba(255, 255, 255, 0.03)),
+        linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.16), rgba(255, 255, 255, 0.03)),
         var(--surface-color);
     cursor: pointer;
     appearance: none;

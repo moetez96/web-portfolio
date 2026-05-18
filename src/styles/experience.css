@@ -39,7 +39,7 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: linear-gradient(180deg, transparent, var(--accent-color), var(--border-color), transparent);
+    background: linear-gradient(180deg, transparent 0%, var(--accent-color) 5%, var(--border-color) 60%, transparent 100%);
     transform: translateX(-50%);
     z-index: -1;
 }
@@ -55,6 +55,14 @@
     }
 
     .timeline .vertical-line {
-        left: 0;
+        left: 1px;
+        transform: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .timeline .vertical-line {
+        left: 1px;
+        transform: none;
     }
 }

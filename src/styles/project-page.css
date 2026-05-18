@@ -6,7 +6,7 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background:
-        linear-gradient(135deg, rgba(178, 214, 48, 0.16), rgba(255, 255, 255, 0.035)),
+        linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.16), rgba(255, 255, 255, 0.035)),
         rgba(255, 255, 255, 0.045);
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.2);
     overflow: hidden;
